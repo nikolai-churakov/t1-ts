@@ -7,7 +7,12 @@ function HomePage() {
     <div>
       <Header/>
       <div className='body-containet'>
-        dddd
+        <div className='cataloge-container'>
+
+        </div>
+        <div className='product-container'>
+
+        </div>
       </div>
     </div>
   );

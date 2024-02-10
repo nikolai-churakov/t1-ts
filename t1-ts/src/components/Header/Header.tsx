@@ -1,19 +1,46 @@
 import React from 'react';
+import styled from 'styled-components';
+import icon from '../../imgs/basket.png'
 import '../Header/Header.css';
-import '../../components/fonts/Jost-Black.ttf';
-import '../../components/fonts/Jost-Bold.ttf';
-import '../../components/fonts/Jost-ExtraBold.ttf';
+// import '../../components/fonts/Jost-Black.ttf';
+// import '../../components/fonts/Jost-Bold.ttf';
+// import '../../components/fonts/Jost-ExtraBold.ttf';
+
+const HeaderContainer = styled.div`
+  display: flex;
+    justify-content: center;
+    background-color: #484283;
+    width: 1440px;
+    height: 528px;
+    position: relative;
+`;
+
+const Button = styled.div`
+cursor: pointer;
+`;
+
+// const Svg = styled(icon)` 
+//   width: 24px; 
+//   height: 24px;
+// `;
 
 
 function Header() {
   return (
 
-        <div className="header">
+        <HeaderContainer>
           <div className='header-menu'>
             <span className="header-menu-name">Goods4you</span>
 
             <div>
-              <ul className="dropdown-menu">
+              <div>Catalog</div>
+              <button>About us</button>
+              <button>Product selection</button>
+              <button>Out team</button>
+              <button>Shipping and payment</button>
+              <button>Contacts</button>
+          
+              {/* <ul className="dropdown-menu">
                  <li><a href="#" className="a">Catalog</a></li>
                   <li><a href="#" className="a">About us</a></li>
                   <li><a href="#" className="a">Product selection</a></li>
@@ -21,12 +48,13 @@ function Header() {
                   <li><a href="#" className="a">Shipping and payment</a></li>    
                   <li><a href="#" className="a">Contacts</a></li>    
                            
-              </ul>
+              </ul> */}
             </div>
 
             <div className="header-menu-basket">
               <span>Card</span>
-              <button className="button-basket"> <img src="../../imgs/basket.svg" alt="basket-logo"/></button>
+              {/* <Svg/> */}
+              <button className="button-basket"><img src={icon}/></button>
             </div> 
             <div className="browse-menu-hr"></div>
           </div>
@@ -49,7 +77,7 @@ function Header() {
               Go to shopping
           </div>
 
-        </div>
+        </HeaderContainer>
 
   );
 }

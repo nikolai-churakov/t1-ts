@@ -24,7 +24,6 @@
 .header-menu-name {
     display: flex;
     justify-content: left;
-    font-family: "Jost-Black";
     color: #ffffff;
     font-size: 30px;
     font-weight: 700;
@@ -84,7 +83,6 @@
     left: 130px;
     top: 170px;
     width: 540px;
-    font-family: 'Jost-Light';
     font-size: 36px;
     color: #ffffff;
     font-weight: 400;
@@ -98,7 +96,6 @@
     left: 130px;
     top: 285px;
     width: 340px;
-    font-family: 'Jost-Light';
     font-size: 16px;
     color: #ffffff;
     font-weight: 600;
@@ -109,8 +106,8 @@
 
 .header-big-site-text {
     position: absolute;
+    font-family: 'Jost';
     top: 200px;
-    font-family: "Jost-ExtraBold";
     font-size: 200px;
     opacity: 0.12;
     color: #ffffff;
