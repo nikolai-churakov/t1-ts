@@ -24,8 +24,6 @@ const HeaderMenuContainer = styled.div`
 `;
 
 const HeaderSiteLogoNameContainer = styled.span`
-  /* display: flex;
-  justify-content: left; */
   color: #ffffff;
   font-size: 30px;
   font-weight: 700;
