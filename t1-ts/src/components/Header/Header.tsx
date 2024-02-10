@@ -116,7 +116,8 @@ const HeaderMenuGoShipping =  styled.div`
   border-radius: 4px;
   left: 145px;
   top: 370px;
-  color: #ffffff;
+  color: #ffffff; &:hover { color: #000000; }
+  cursor: pointer;
   text-align: center;
   align-items: center;
   justify-content: center;
