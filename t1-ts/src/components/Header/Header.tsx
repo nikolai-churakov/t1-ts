@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import icon from '../../imgs/Vector.svg'
 
-import '../Header/Header.css';
-
 const HeaderContainer = styled.div`
   display: flex;
     justify-content: center;
