@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import icon from '../../imgs/basket.png'
-import '../Header/Header.css';
-// import '../../components/fonts/Jost-Black.ttf';
-// import '../../components/fonts/Jost-Bold.ttf';
-// import '../../components/fonts/Jost-ExtraBold.ttf';
 
+import '../Header/Header.css';
 const HeaderContainer = styled.div`
   display: flex;
     justify-content: center;
@@ -18,12 +15,6 @@ const HeaderContainer = styled.div`
 const Button = styled.div`
 cursor: pointer;
 `;
-
-// const Svg = styled(icon)` 
-//   width: 24px; 
-//   height: 24px;
-// `;
-
 
 function Header() {
   return (
