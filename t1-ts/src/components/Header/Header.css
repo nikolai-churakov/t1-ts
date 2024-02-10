@@ -1,88 +1,135 @@
-                            .App {
-                                text-align: center;
-                            }
-                            
-                            .header {
-                                display: flex;
-                                justify-content: center;
-                                background-color: #484283;
-                                width: 1440px;
-                                height: 528px;
-                                position: relative;
-                            }
-                            
-                            .header-menu {
-                                display: flex;
-                                background-color: #e68888;
-                                width: 1200px;
-                                height: 49px;
-                                margin-top: 15px;
-                            }
-                            
-                            .header-menu-name {
-                                font-family: "Jost-Black";
-                                color: #ffffff;
-                                font-size: 30px;
-                                font-weight: 700;
-                                line-height: 43px;
-                                margin-left: 26px;
-                            }
-                            
-                            .button-basket {
-                                color: #29b830;
-                            }
-                            
-                            .header-h1-span {
-                                position: absolute;
-                                left: 130px;
-                                top: 170px;
-                                width: 540px;
-                                font-family: 'Jost-Light';
-                                font-size: 36px;
-                                color: #ffffff;
-                                font-weight: 400;
-                                line-height: 50px;
-                                letter-spacing: 0.5px;
-                                text-align: left;
-                            }
-                            
-                            .header-span {
-                                position: absolute;
-                                left: 130px;
-                                top: 285px;
-                                width: 340px;
-                                font-family: 'Jost-Light';
-                                font-size: 16px;
-                                color: #ffffff;
-                                font-weight: 600;
-                                line-height: 22px;
-                                letter-spacing: 0.5px;
-                                text-align: left;
-                            }
-                            
-                            .header-big-site-text {
-                                position: absolute;
-                                top: 200px;
-                                font-family: "Jost-ExtraBold";
-                                font-size: 200px;
-                                opacity: 0.12;
-                                color: #ffffff;
-                                font-weight: 700;
-                                line-height: 289px;
-                                text-align: center;
-                            }
-                            
-                            .header-menu-go-to-shopping {
-                                display: flex;
-                                position: absolute;
-                                width: 200px;
-                                height: 67px;
-                                background-color: #F14F4F;
-                                border-radius: 4px;
-                                left: 145px;
-                                top: 370px;
-                                color: #ffffff;
-                                text-align: center;
-                                align-items: center;
-                                justify-content: center;
-                            }
+.App {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #484283;
+    width: 1440px;
+    height: 528px;
+    position: relative;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    /* background-color: #e68888; */
+    width: 1440px;
+    height: 49px;
+    margin-top: 15px;
+    position: absolute;
+}
+
+.header-menu-name {
+    display: flex;
+    justify-content: left;
+    font-family: "Jost-Black";
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 43px;
+    margin-left: 26px;
+}
+
+.dropdown-menu li {
+    display: inline;
+    margin-top: 16px;
+    padding-left: 13px;
+    list-style-type: none;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    display: inline;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.dropdown-menu li a:hover {
+    color: #000000;
+}
+
+.header-menu-basket {
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 80px;
+    color: #ffffff;
+}
+
+.browse-menu-hr {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 1180px;
+    height: 1px;
+    background-color: #e8e8e8;
+    top: 49px;
+    justify-content: center;
+    margin: 0;
+}
+
+.button-basket {
+    color: #29b830;
+    width: 40px;
+    height: 40px;
+}
+
+.header-h1-span {
+    position: absolute;
+    left: 130px;
+    top: 170px;
+    width: 540px;
+    font-family: 'Jost-Light';
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.header-span {
+    position: absolute;
+    left: 130px;
+    top: 285px;
+    width: 340px;
+    font-family: 'Jost-Light';
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.header-big-site-text {
+    position: absolute;
+    top: 200px;
+    font-family: "Jost-ExtraBold";
+    font-size: 200px;
+    opacity: 0.12;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 289px;
+    text-align: center;
+}
+
+.header-menu-go-to-shopping {
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 67px;
+    background-color: #F14F4F;
+    border-radius: 4px;
+    left: 145px;
+    top: 370px;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

@@ -4,7 +4,12 @@ import Header from '../components/Header/Header'
 
 function HomePage() {
   return (
-    <Header/>
+    <div>
+      <Header/>
+      <div className='body-containet'>
+        dddd
+      </div>
+    </div>
   );
 }
 
