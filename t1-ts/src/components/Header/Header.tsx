@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import icon from '../../imgs/basket.png'
+import icon from '../../imgs/Vector.svg'
 
 import '../Header/Header.css';
+
 const HeaderContainer = styled.div`
   display: flex;
     justify-content: center;
@@ -12,62 +13,149 @@ const HeaderContainer = styled.div`
     position: relative;
 `;
 
+const HeaderMenuContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  /* background-color: #e68888; */
+  width: 1440px;
+  height: 49px;
+  margin-top: 15px;
+  position: absolute;
+`;
+
+const HeaderSiteLogoNameContainer = styled.span`
+  /* display: flex;
+  justify-content: left; */
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 43px;
+  margin-left: 26px;  
+`;
+
+const HeaderMenuButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+  padding-left: 13px;
+  list-style-type: none;
+  text-align: left;
+`;
+
 const Button = styled.div`
+font-size: 14px;
+font-weight: 400;
+letter-spacing: 0.35px;
 cursor: pointer;
+color: #ffffff; &:hover { color: #000000; }
+margin-left: 16px;
+margin-right: 16px;
+`;
+
+const HeaderMenuBasketContainer = styled.div`
+  display: flex;
+  position: relative;
+  top: 11px;
+  left: -8px;
+  color: #ffffff;
+`;
+
+const Hr =  styled.div`
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 1180px;
+  height: 1px;
+  background-color: #e8e8e8;
+  top: 49px;
+  justify-content: center;
+  margin: 0 0 15 15;
+`;
+
+const HeaderBigSiteLogoText =  styled.div`
+  position: absolute;
+  font-family: 'Jost';
+  top: 200px;
+  font-size: 200px;
+  letter-spacing: 13px;
+  opacity: 0.12;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 294px;
+  text-align: center;
+`;
+
+const HeaderHSpan =  styled.div`
+position: absolute;
+left: 130px;
+  top: 170px;
+  width: 540px;
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+  text-align: left;    
+`;
+
+const HeaderSpan =  styled.div`
+  position: absolute;
+  left: 130px;
+  top: 285px;
+  width: 340px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-align: left;
+`;
+
+const HeaderMenuGoShipping =  styled.div`
+  display: flex;
+  position: absolute;
+  width: 200px;
+  height: 67px;
+  background-color: #F14F4F;
+  border-radius: 4px;
+  left: 145px;
+  top: 370px;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 `;
 
 function Header() {
   return (
-
         <HeaderContainer>
-          <div className='header-menu'>
-            <span className="header-menu-name">Goods4you</span>
+          <HeaderMenuContainer>
+            <HeaderSiteLogoNameContainer>Goods4you</HeaderSiteLogoNameContainer>
+            <HeaderMenuButtonsContainer>
+              <Button>Catalog</Button>
+              <Button>About us</Button>
+              <Button>Product selection</Button>
+              <Button>Out team</Button>
+              <Button>Shipping and payment</Button>
+              <Button>Contacts</Button>
+            </HeaderMenuButtonsContainer>
 
-            <div>
-              <div>Catalog</div>
-              <button>About us</button>
-              <button>Product selection</button>
-              <button>Out team</button>
-              <button>Shipping and payment</button>
-              <button>Contacts</button>
-          
-              {/* <ul className="dropdown-menu">
-                 <li><a href="#" className="a">Catalog</a></li>
-                  <li><a href="#" className="a">About us</a></li>
-                  <li><a href="#" className="a">Product selection</a></li>
-                  <li><a href="#" className="a">Out team</a></li>
-                  <li><a href="#" className="a">Shipping and payment</a></li>    
-                  <li><a href="#" className="a">Contacts</a></li>    
-                           
-              </ul> */}
-            </div>
-
-            <div className="header-menu-basket">
+            <HeaderMenuBasketContainer>
               <span>Card</span>
-              {/* <Svg/> */}
-              <button className="button-basket"><img src={icon}/></button>
-            </div> 
-            <div className="browse-menu-hr"></div>
-          </div>
-
-          <div className='header-h1-span'>
+              <div><img src={icon} alt='basket'/></div>
+            </HeaderMenuBasketContainer> 
+            <Hr/>
+          </HeaderMenuContainer>
+          <HeaderHSpan>
             Any products from famous brands
             with worldwide delivery
-          </div>
-
-          <div className='header-span'>
-          We sell smartphones, laptops, clothes, shoes
-          and many other products at low prices
-          </div>
-
-          <div className='header-big-site-text'>
-          Goods4you
-          </div>
-
-          <div className='header-menu-go-to-shopping'>
-              Go to shopping
-          </div>
-
+          </HeaderHSpan>
+          <HeaderSpan>
+            We sell smartphones, laptops, clothes, shoes
+            and many other products at low prices
+          </HeaderSpan>
+          <HeaderBigSiteLogoText>Goods4you</HeaderBigSiteLogoText>
+          <HeaderMenuGoShipping>Go to shopping</HeaderMenuGoShipping>
         </HeaderContainer>
 
   );
