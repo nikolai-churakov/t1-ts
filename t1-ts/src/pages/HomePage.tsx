@@ -1,10 +1,11 @@
 import React from 'react';
-import HomePage from '../pages/HomePage'
+import './HomePage.css';
+import Header from '../components/Header/Header'
 
-function App() {
-    return (
-       <HomePage/>
-    );
-  }
-  
-  export default App;
+function HomePage() {
+  return (
+    <Header/>
+  );
+}
+
+export default HomePage;
