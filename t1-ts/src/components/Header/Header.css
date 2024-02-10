@@ -1,13 +1,88 @@
-.App {
-    text-align: center;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #484283;
-    width: 1440px;
-    height: 528px;
-}
+                            .App {
+                                text-align: center;
+                            }
+                            
+                            .header {
+                                display: flex;
+                                justify-content: center;
+                                background-color: #484283;
+                                width: 1440px;
+                                height: 528px;
+                                position: relative;
+                            }
+                            
+                            .header-menu {
+                                display: flex;
+                                background-color: #e68888;
+                                width: 1200px;
+                                height: 49px;
+                                margin-top: 15px;
+                            }
+                            
+                            .header-menu-name {
+                                font-family: "Jost-Black";
+                                color: #ffffff;
+                                font-size: 30px;
+                                font-weight: 700;
+                                line-height: 43px;
+                                margin-left: 26px;
+                            }
+                            
+                            .button-basket {
+                                color: #29b830;
+                            }
+                            
+                            .header-h1-span {
+                                position: absolute;
+                                left: 130px;
+                                top: 170px;
+                                width: 540px;
+                                font-family: 'Jost-Light';
+                                font-size: 36px;
+                                color: #ffffff;
+                                font-weight: 400;
+                                line-height: 50px;
+                                letter-spacing: 0.5px;
+                                text-align: left;
+                            }
+                            
+                            .header-span {
+                                position: absolute;
+                                left: 130px;
+                                top: 285px;
+                                width: 340px;
+                                font-family: 'Jost-Light';
+                                font-size: 16px;
+                                color: #ffffff;
+                                font-weight: 600;
+                                line-height: 22px;
+                                letter-spacing: 0.5px;
+                                text-align: left;
+                            }
+                            
+                            .header-big-site-text {
+                                position: absolute;
+                                top: 200px;
+                                font-family: "Jost-ExtraBold";
+                                font-size: 200px;
+                                opacity: 0.12;
+                                color: #ffffff;
+                                font-weight: 700;
+                                line-height: 289px;
+                                text-align: center;
+                            }
+                            
+                            .header-menu-go-to-shopping {
+                                display: flex;
+                                position: absolute;
+                                width: 200px;
+                                height: 67px;
+                                background-color: #F14F4F;
+                                border-radius: 4px;
+                                left: 145px;
+                                top: 370px;
+                                color: #ffffff;
+                                text-align: center;
+                                align-items: center;
+                                justify-content: center;
+                            }
