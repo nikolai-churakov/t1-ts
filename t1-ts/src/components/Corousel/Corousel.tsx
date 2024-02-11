@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import niger from "../../imgs/pexels-budgeron-bach-5158825.jpg";
 
-const FAQContainer = styled.div`
+const CorouselContainer = styled.div`
   z-index: 140;
   display: flex;
   justify-content: center;
-  background-color: #a18989;
+  background-color: #e9e0e0;
   width: 1440px;
-  height: 439px;
+  height: 778px;
   position: relative;
 `;
 
@@ -66,9 +65,9 @@ const AboutBrandDiv = styled.div`
   letter-spacing: 0.9px;
   text-align: left;
 `;
-function FAQ() {
+function Corousel() {
   return (
-    <FAQContainer>
+    <CorouselContainer>
       <HeaderHSpan>
         About us
       </HeaderHSpan>
@@ -79,8 +78,8 @@ function FAQ() {
       But we will help you make the right choice!
       </HeaderSpan>
       <AboutBrandDiv>Goods4you</AboutBrandDiv>
-    </FAQContainer>
+    </CorouselContainer>
   );
 }
 
-export default FAQ;
+export default Corousel;

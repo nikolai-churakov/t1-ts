@@ -1,31 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import niger from "../../imgs/pexels-budgeron-bach-5158825.jpg";
 
-const FAQContainer = styled.div`
+const OurTeamContainer = styled.div`
   z-index: 140;
   display: flex;
   justify-content: center;
-  background-color: #a18989;
+  background-color: #484283;
   width: 1440px;
-  height: 439px;
+  height: 1190px;
   position: relative;
-`;
-
-const HeaderMenuBasketContainer = styled.div`
-  display: flex;
-  position: relative;
-  top: 11px;
-  left: -8px;
-  color: #7a7878;
-`;
-
-const ImgAboutWraper = styled.div`
-  display: block;
-  z-index: 10;
-  position: relative;
-  top: -10px;
-  left: 260px;
 `;
 
 const HeaderHSpan = styled.div`
@@ -66,9 +49,9 @@ const AboutBrandDiv = styled.div`
   letter-spacing: 0.9px;
   text-align: left;
 `;
-function FAQ() {
+function OurTeam() {
   return (
-    <FAQContainer>
+    <OurTeamContainer>
       <HeaderHSpan>
         About us
       </HeaderHSpan>
@@ -79,8 +62,8 @@ function FAQ() {
       But we will help you make the right choice!
       </HeaderSpan>
       <AboutBrandDiv>Goods4you</AboutBrandDiv>
-    </FAQContainer>
+    </OurTeamContainer>
   );
 }
 
-export default FAQ;
+export default OurTeam;

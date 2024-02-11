@@ -4,13 +4,15 @@ import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Product from "../components/Product/Product";
 import About from "../components/About/About";
+import Corousel from "../components/Corousel/Corousel";
+import OurTeam from "../components/OurTeam/Ourteam";
 import FAQ from "../components/FAQ/FAQ";
 
 const BodyContainet = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #f1c2b2;
+  /* background-color: #f1c2b2; */
   width: 1440px;
   height: 1378px;
   position: relative;
@@ -20,14 +22,12 @@ const CatalogeContainet = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #a79995;
   width: 280px;
   min-height: 611px;
   margin-right: 20px;
 `;
 
 const CatalogeCataloge = styled.div`
-  color: #444B58;
   font-weight: 700;
   font-size: 30px;
   letter-spacing: 1px;
@@ -191,9 +191,12 @@ function HomePage() {
           <ButtonShowMore>Show more</ButtonShowMore>
           </ProductContainet>
       </BodyContainet>
+
       <About />
+      <Corousel/>
+      <OurTeam/>
       <FAQ />
-      
+
     </div>
   );
 }
