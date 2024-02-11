@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import icon from '../../imgs/Vector.svg'
+import React from "react";
+import styled from "styled-components";
+import icon from "../../imgs/Vector.svg";
 
 const HeaderContainer = styled.div`
   display: flex;
-    justify-content: center;
-    background-color: #484283;
-    width: 1440px;
-    height: 528px;
-    position: relative;
+  justify-content: center;
+  background-color: #484283;
+  width: 1440px;
+  height: 528px;
+  position: relative;
 `;
 
 const HeaderMenuContainer = styled.div`
@@ -26,7 +26,7 @@ const HeaderSiteLogoNameContainer = styled.span`
   font-size: 30px;
   font-weight: 700;
   line-height: 43px;
-  margin-left: 26px;  
+  margin-left: 26px;
 `;
 
 const HeaderMenuButtonsContainer = styled.div`
@@ -39,13 +39,16 @@ const HeaderMenuButtonsContainer = styled.div`
 `;
 
 const Button = styled.div`
-font-size: 14px;
-font-weight: 400;
-letter-spacing: 0.35px;
-cursor: pointer;
-color: #ffffff; &:hover { color: #000000; }
-margin-left: 16px;
-margin-right: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+  color: #ffffff;
+  &:hover {
+    color: #000000;
+  }
+  margin-left: 16px;
+  margin-right: 16px;
 `;
 
 const HeaderMenuBasketContainer = styled.div`
@@ -56,7 +59,7 @@ const HeaderMenuBasketContainer = styled.div`
   color: #ffffff;
 `;
 
-const Hr =  styled.div`
+const Hr = styled.div`
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -68,9 +71,9 @@ const Hr =  styled.div`
   margin: 0 0 15 15;
 `;
 
-const HeaderBigSiteLogoText =  styled.div`
+const HeaderBigSiteLogoText = styled.div`
   position: absolute;
-  font-family: 'Jost';
+  font-family: "Jost";
   top: 200px;
   font-size: 200px;
   letter-spacing: 13px;
@@ -81,9 +84,9 @@ const HeaderBigSiteLogoText =  styled.div`
   text-align: center;
 `;
 
-const HeaderHSpan =  styled.div`
-position: absolute;
-left: 130px;
+const HeaderHSpan = styled.div`
+  position: absolute;
+  left: 130px;
   top: 170px;
   width: 540px;
   font-size: 36px;
@@ -91,10 +94,10 @@ left: 130px;
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0.5px;
-  text-align: left;    
+  text-align: left;
 `;
 
-const HeaderSpan =  styled.div`
+const HeaderSpan = styled.div`
   position: absolute;
   left: 130px;
   top: 285px;
@@ -107,16 +110,19 @@ const HeaderSpan =  styled.div`
   text-align: left;
 `;
 
-const HeaderMenuGoShipping =  styled.div`
+const HeaderMenuGoShipping = styled.div`
   display: flex;
   position: absolute;
   width: 200px;
   height: 67px;
-  background-color: #F14F4F;
+  background-color: #f14f4f;
   border-radius: 4px;
   left: 145px;
   top: 370px;
-  color: #ffffff; &:hover { color: #000000; }
+  color: #ffffff;
+  &:hover {
+    color: #000000;
+  }
   cursor: pointer;
   text-align: center;
   align-items: center;
@@ -125,36 +131,36 @@ const HeaderMenuGoShipping =  styled.div`
 
 function Header() {
   return (
-        <HeaderContainer>
-          <HeaderMenuContainer>
-            <HeaderSiteLogoNameContainer>Goods4you</HeaderSiteLogoNameContainer>
-            <HeaderMenuButtonsContainer>
-              <Button>Catalog</Button>
-              <Button>About us</Button>
-              <Button>Product selection</Button>
-              <Button>Out team</Button>
-              <Button>Shipping and payment</Button>
-              <Button>Contacts</Button>
-            </HeaderMenuButtonsContainer>
+    <HeaderContainer>
+      <HeaderMenuContainer>
+        <HeaderSiteLogoNameContainer>Goods4you</HeaderSiteLogoNameContainer>
+        <HeaderMenuButtonsContainer>
+          <Button>Catalog</Button>
+          <Button>About us</Button>
+          <Button>Product selection</Button>
+          <Button>Out team</Button>
+          <Button>Shipping and payment</Button>
+          <Button>Contacts</Button>
+        </HeaderMenuButtonsContainer>
 
-            <HeaderMenuBasketContainer>
-              <span>Card</span>
-              <div><img src={icon} alt='basket'/></div>
-            </HeaderMenuBasketContainer> 
-            <Hr/>
-          </HeaderMenuContainer>
-          <HeaderHSpan>
-            Any products from famous brands
-            with worldwide delivery
-          </HeaderHSpan>
-          <HeaderSpan>
-            We sell smartphones, laptops, clothes, shoes
-            and many other products at low prices
-          </HeaderSpan>
-          <HeaderBigSiteLogoText>Goods4you</HeaderBigSiteLogoText>
-          <HeaderMenuGoShipping>Go to shopping</HeaderMenuGoShipping>
-        </HeaderContainer>
-
+        <HeaderMenuBasketContainer>
+          <span>Card</span>
+          <div>
+            <img src={icon} alt="basket" />
+          </div>
+        </HeaderMenuBasketContainer>
+        <Hr />
+      </HeaderMenuContainer>
+      <HeaderHSpan>
+        Any products from famous brands with worldwide delivery
+      </HeaderHSpan>
+      <HeaderSpan>
+        We sell smartphones, laptops, clothes, shoes and many other products at
+        low prices
+      </HeaderSpan>
+      <HeaderBigSiteLogoText>Goods4you</HeaderBigSiteLogoText>
+      <HeaderMenuGoShipping>Go to shopping</HeaderMenuGoShipping>
+    </HeaderContainer>
   );
 }
 
