@@ -7,7 +7,7 @@ const AboutContainer = styled.div`
   justify-content: center;
   background-color: #484283;
   width: 1440px;
-  height: 528px;
+  height: 580px;
   position: relative;
 `;
 

@@ -1,9 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import max from "../../imgs/max.jpg";
+import tom from "../../imgs/tom.jpg";
+import elena from "../../imgs/elena.jpg";
+import grek from "../../imgs/grek.jpg";
+import lea from "../../imgs/lea.jpg";
+import iren from "../../imgs/iren.jpg";
+
 
 const OurTeamContainer = styled.div`
   z-index: 140;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   background-color: #484283;
   width: 1440px;
@@ -11,57 +19,106 @@ const OurTeamContainer = styled.div`
   position: relative;
 `;
 
-const HeaderHSpan = styled.div`
-  position: absolute;
-  left: 137px;
-  top: 223px;
-  z-index: 120;
-  width: 540px;
-  font-size: 30px;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: left;
+const RowWrapper = styled.div`
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 130px;
+  margin-right: 20px;
+  margin-left: 20px;
 `;
 
-const HeaderSpan = styled.div`
-  position: absolute;
-  left: 130px;
-  top: 285px;
-  z-index: 121;
-  width: 340px;
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 600;
-  line-height: 16px;
-  letter-spacing: 0.5px;
-  text-align: left;
+const RowWrapperTwo = styled.div`
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 230px;
 `;
 
-const AboutBrandDiv = styled.div`
+const OutteamInfoBlockNone = styled.div`
+  z-index: 130; 
   position: absolute;
-  left: 483px;
-  top: 402px;
-  z-index: 121;
-  width: 340px;
-  font-size: 20px;
-  color: #ffffff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;  
+  color: white;
+  font-size: 24px;
   font-weight: 700;
-  letter-spacing: 0.9px;
-  text-align: left;
+  `;
+
+const ImgAboutWraper = styled.div`
+  z-index: 120; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  color: white;
+  position: relative;
+  margin-bottom: 14px; 
+  &:hover ${OutteamInfoBlockNone} {display: flex};
+  /* &:hover {filter: brightness(50%)}; */
+  cursor: pointer;
+
 `;
+
+const Photo =styled.img`
+ z-index: 120; 
+  position: relative;
+  /* &:hover ${OutteamInfoBlockNone} {display: flex}; */
+  &:hover {filter: brightness(60%)};
+  cursor: pointer;
+
+`;
+
 function OurTeam() {
   return (
     <OurTeamContainer>
-      <HeaderHSpan>
-        About us
-      </HeaderHSpan>
-      <HeaderSpan>
-      Every day a person has a choice what to spend his <br></br>
-      money on. Stores and websites offer an endless list<br></br> 
-      of products.<br></br> 
-      But we will help you make the right choice!
-      </HeaderSpan>
-      <AboutBrandDiv>Goods4you</AboutBrandDiv>
+      <RowWrapper>
+      <ImgAboutWraper>
+      <OutteamInfoBlockNone>Max<br></br>Administrator</OutteamInfoBlockNone>
+            <Photo src={max}
+            width={380}
+            height={400} 
+            alt="Max Admin" />
+          </ImgAboutWraper>
+          <ImgAboutWraper>
+            <img src={tom}
+            width={380}
+            height={400} 
+            alt="Tom finance" />
+          </ImgAboutWraper>
+      </RowWrapper>
+
+      <RowWrapperTwo>
+      <ImgAboutWraper>
+            <img src={elena}
+            width={380}
+            height={400} 
+            alt="Elena manager" />
+          </ImgAboutWraper>
+          <ImgAboutWraper>
+            <img src={grek}
+            width={380}
+            height={400} 
+            alt="Grek tailor" />
+          </ImgAboutWraper>
+      </RowWrapperTwo>
+
+      <RowWrapper>
+      <ImgAboutWraper>
+            <img src={lea}
+            width={380}
+            height={400} 
+            alt="Lea tailor" />
+          </ImgAboutWraper>
+          <ImgAboutWraper>
+            <img src={iren}
+            width={380}
+            height={400} 
+            alt="Iren cleaner" />
+          </ImgAboutWraper>
+      </RowWrapper>
+
     </OurTeamContainer>
   );
 }
