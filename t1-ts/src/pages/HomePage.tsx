@@ -7,6 +7,7 @@ import About from "../components/About/About";
 import Corousel from "../components/Corousel/Corousel";
 import OurTeam from "../components/OurTeam/Ourteam";
 import FAQ from "../components/FAQ/FAQ";
+import Footer from "../components/Footer/Footer"
 
 const BodyContainet = styled.div`
   display: flex;
@@ -196,7 +197,7 @@ function HomePage() {
       <Corousel/>
       <OurTeam/>
       <FAQ />
-
+      <Footer/>
     </div>
   );
 }

@@ -6,7 +6,7 @@ const FAQContainer = styled.div`
   z-index: 140;
   display: flex;
   justify-content: center;
-  background-color: #a18989;
+  background-color: #ffffff;
   width: 1440px;
   height: 439px;
   position: relative;
