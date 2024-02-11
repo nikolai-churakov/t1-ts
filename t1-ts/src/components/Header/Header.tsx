@@ -112,7 +112,7 @@ const HeaderSpan = styled.div`
 
 const HeaderMenuGoShipping = styled.div`
   display: flex;
-  position: absolute;
+  position: relative;
   width: 200px;
   height: 67px;
   background-color: #f14f4f;

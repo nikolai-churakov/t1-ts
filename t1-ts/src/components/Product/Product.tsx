@@ -6,7 +6,7 @@ const ProductCartContainer = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 260px;
+  width: 273px;
   height: 358px;
   border-radius: 4px;
   margin-right: 20px;

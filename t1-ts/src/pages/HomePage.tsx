@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Header from "../components/Header/Header";
 import Product from "../components/Product/Product";
+import About from "../components/About/About";
 
 const BodyContainet = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const BodyContainet = styled.div`
   background-color: #f1c2b2;
   width: 1440px;
   height: 1378px;
-  position: absolute;
+  position: relative;
 `;
 
 const CatalogeContainet = styled.div`
@@ -129,6 +130,23 @@ const ProductContainet = styled.div`
   margin-top: 130px;
 `;
 
+const ButtonShowMore = styled.div`
+  display: flex;
+  position: relative;
+  left: 40%;
+  width: 167px;
+  height: 71px;
+  background-color: #f14f4f;
+  border-radius: 4px;
+  color: #ffffff;
+  &:hover {
+    color: #000000;
+  }
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+`;
+
 function HomePage() {
   return (
     <div>
@@ -169,8 +187,11 @@ function HomePage() {
           <Product/>
           <Product/>
           <Product/>
+          <ButtonShowMore>Show more</ButtonShowMore>
           </ProductContainet>
       </BodyContainet>
+      <About />
+      
     </div>
   );
 }
