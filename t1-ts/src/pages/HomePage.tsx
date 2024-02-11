@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Header from "../components/Header/Header";
+import Product from "../components/Product/Product";
 
 const BodyContainet = styled.div`
   display: flex;
@@ -122,10 +123,10 @@ const CatalogeContainetButtonReset = styled.div`
 
 const ProductContainet = styled.div`
   display: flex;
-  justify-content: center;
-  background-color: #b33c1b;
+  flex-wrap: wrap;
   width: 880px;
   min-height: 1194px;
+  margin-top: 130px;
 `;
 
 function HomePage() {
@@ -156,8 +157,19 @@ function HomePage() {
 
            </CatalogeSelectionByParamContainet>
         </CatalogeContainet>
-
-        <ProductContainet>bbb</ProductContainet>
+        
+        <ProductContainet>
+          {/* Сюда будут мапаться карточки с бека */}
+          <Product/>
+          <Product/>
+          <Product/>
+          <Product/>
+          <Product/>
+          <Product/>
+          <Product/>
+          <Product/>
+          <Product/>
+          </ProductContainet>
       </BodyContainet>
     </div>
   );
