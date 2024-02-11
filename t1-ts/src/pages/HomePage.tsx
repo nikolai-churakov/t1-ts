@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Product from "../components/Product/Product";
 import About from "../components/About/About";
+import FAQ from "../components/FAQ/FAQ";
 
 const BodyContainet = styled.div`
   display: flex;
@@ -191,6 +192,7 @@ function HomePage() {
           </ProductContainet>
       </BodyContainet>
       <About />
+      <FAQ />
       
     </div>
   );

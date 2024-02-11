@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import niger from "../../imgs/pexels-budgeron-bach-5158825.jpg";
 
-const AboutContainer = styled.div`
+const FAQContainer = styled.div`
+  z-index: 140;
   display: flex;
   justify-content: center;
-  background-color: #484283;
+  background-color: #ffffff;
   width: 1440px;
-  height: 528px;
+  height: 439px;
   position: relative;
 `;
 
@@ -16,7 +17,7 @@ const HeaderMenuBasketContainer = styled.div`
   position: relative;
   top: 11px;
   left: -8px;
-  color: #ffffff;
+  color: #7a7878;
 `;
 
 const ImgAboutWraper = styled.div`
@@ -65,43 +66,9 @@ const AboutBrandDiv = styled.div`
   letter-spacing: 0.9px;
   text-align: left;
 `;
-
-const TriangleOne = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 20;
-  width: 0;
-  height: 0;
-  border-top: 580px solid #484283;
-  border-right: 179px solid transparent;
-`;
-
-const TriangleTwo = styled.div`
-  position: absolute;
-    top: 0px;
-    left: 500px;
-    z-index: 20;
-    width: 0;
-    height: 0;
-    border-left: 180px solid transparent;
-    border-bottom: 580px solid #484283;
-`;
-
-
-function About() {
+function FAQ() {
   return (
-    <AboutContainer>
-        <HeaderMenuBasketContainer>
-          <ImgAboutWraper>
-          <TriangleOne/>
-            <img src={niger}
-            width={680}
-            height={580} 
-            alt="niger" />
-            <TriangleTwo/>
-          </ImgAboutWraper>
-        </HeaderMenuBasketContainer>
+    <FAQContainer>
       <HeaderHSpan>
         About us
       </HeaderHSpan>
@@ -112,8 +79,8 @@ function About() {
       But we will help you make the right choice!
       </HeaderSpan>
       <AboutBrandDiv>Goods4you</AboutBrandDiv>
-    </AboutContainer>
+    </FAQContainer>
   );
 }
 
-export default About;
+export default FAQ;

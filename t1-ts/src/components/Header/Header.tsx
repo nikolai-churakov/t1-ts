@@ -117,8 +117,8 @@ const HeaderMenuGoShipping = styled.div`
   height: 67px;
   background-color: #f14f4f;
   border-radius: 4px;
-  left: 145px;
-  top: 370px;
+  left: -475px;
+  top: 369px;
   color: #ffffff;
   &:hover {
     color: #000000;
