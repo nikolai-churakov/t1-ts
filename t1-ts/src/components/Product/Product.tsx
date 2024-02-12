@@ -14,7 +14,10 @@ const ProductCartContainer = styled.div`
 
 const ProductCartText = styled.div`
   font-size: 16px;
-  color: #000000; &:hover { color: #f14f4f; }
+  color: #000000;
+  &:hover {
+    color: #f14f4f;
+  }
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -36,14 +39,11 @@ const ProductCardPrice = styled.div`
 
 function Product() {
   return (
-  <ProductCartContainer>
-    <img src={productImg} 
-      width={280}
-      height={293}
-      alt="productPicture" />
-    <ProductCartText>Nike Air Force 1 '07 QS</ProductCartText>
-    <ProductCardPrice>110 $</ProductCardPrice>
-  </ProductCartContainer>
+    <ProductCartContainer>
+      <img src={productImg} width={280} height={293} alt="productPicture" />
+      <ProductCartText>Nike Air Force 1 '07 QS</ProductCartText>
+      <ProductCardPrice>110 $</ProductCardPrice>
+    </ProductCartContainer>
   );
 }
 

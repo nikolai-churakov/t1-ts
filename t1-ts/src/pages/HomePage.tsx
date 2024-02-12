@@ -9,6 +9,11 @@ import OurTeam from "../components/OurTeam/Ourteam";
 import FAQ from "../components/FAQ/FAQ";
 import Footer from "../components/Footer/Footer";
 
+const BodyWrap = styled.div`
+max-width: 1440px;
+margin: auto;
+`;
+
 const BodyContainet = styled.div`
   display: flex;
   flex-direction: row;
@@ -157,7 +162,7 @@ const ButtonShowMore = styled.div`
 
 function HomePage() {
   return (
-    <div>
+    <BodyWrap>
       <Header />
       <BodyContainet>
         <CatalogeContainet>
@@ -206,7 +211,7 @@ function HomePage() {
       <OurTeam />
       <FAQ />
       <Footer />
-    </div>
+    </BodyWrap>
   );
 }
 
