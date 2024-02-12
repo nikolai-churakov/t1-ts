@@ -20,15 +20,17 @@ const OurTeamContainer = styled.div`
 
 const HeaderHSpan = styled.div`
   position: absolute;
-  left: 130px;
+  left: 131px;
   top: 60px;
   z-index: 130;
   width: 540px;
   font-size: 30px;
+  font-family: "JostBold";
   color: #ffffff;
   font-weight: 700;
   text-align: left;
-  letter-spacing: 2px;
+  /* word-spacing: 2px; */
+  /* letter-spacing: 2px; */
 `;
 
 const RowWrapper = styled.div`
@@ -48,93 +50,101 @@ const RowWrapperTwo = styled.div`
 `;
 
 const OutteamInfoBlockNone = styled.div`
-  z-index: 130; 
+  z-index: 130;
   position: absolute;
   display: none;
   justify-content: center;
   align-items: center;
-  text-align: center;  
+  text-align: center;
   color: white;
+  font-family: 'JostSemiBold';
   font-size: 24px;
   font-weight: 700;
-  `;
+`;
+
+const PhotoDiv = styled.div``;
 
 const ImgAboutWraper = styled.div`
-  z-index: 120; 
+  z-index: 120;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  color: white;
+  align-items: center;
+  color: #ffff;
   position: relative;
-  margin-bottom: 20px; 
-  &:hover ${OutteamInfoBlockNone} {display: flex};
+  margin-bottom: 20px;
+  &:hover ${OutteamInfoBlockNone} {
+    display: flex;
+  }
+  &:hover ${PhotoDiv} {
+    filter: brightness(51%);
+  }
   cursor: pointer;
 `;
 
-const Photo =styled.img`
- z-index: 120; 
+const Photo = styled.img`
+  z-index: 120;
   position: relative;
-  &:hover {filter: brightness(50%)};
   cursor: pointer;
 `;
 
 function OurTeam() {
   return (
     <OurTeamContainer>
-      <HeaderHSpan>
-        Out team
-      </HeaderHSpan>
+      <HeaderHSpan>Our team</HeaderHSpan>
       <RowWrapper>
         <ImgAboutWraper>
-          <OutteamInfoBlockNone>Max<br></br>Administrator</OutteamInfoBlockNone>
-          <Photo src={max}
-            width={380}
-            height={400} 
-            alt="Max Admin" />
+          <OutteamInfoBlockNone>
+            Max<br></br>Administrator
+          </OutteamInfoBlockNone>
+          <PhotoDiv>
+            <Photo src={max} width={380} height={400} alt="Max Admin" />
+          </PhotoDiv>
         </ImgAboutWraper>
         <ImgAboutWraper>
-          <OutteamInfoBlockNone>Tom<br></br>Finance</OutteamInfoBlockNone>
-          <Photo src={tom}
-            width={380}
-            height={400} 
-            alt="Tom finance" />
+          <OutteamInfoBlockNone>
+            Tom<br></br>Finance
+          </OutteamInfoBlockNone>
+          <Photo src={tom} width={380} height={400} alt="Tom finance" />
         </ImgAboutWraper>
       </RowWrapper>
 
       <RowWrapperTwo>
         <ImgAboutWraper>
-          <OutteamInfoBlockNone>Elena<br></br>Manager</OutteamInfoBlockNone>
-            <Photo src={elena}
-              width={380}
-              height={400} 
-              alt="Elena manager" />
+          <OutteamInfoBlockNone>
+            Elena<br></br>Manager
+          </OutteamInfoBlockNone>
+          <PhotoDiv>
+            <Photo src={elena} width={380} height={400} alt="Elena manager" />
+          </PhotoDiv>
         </ImgAboutWraper>
         <ImgAboutWraper>
-            <OutteamInfoBlockNone>Grek<br></br>Tailor</OutteamInfoBlockNone>
-            <Photo src={grek}
-              width={380}
-              height={400} 
-              alt="Grek tailor" />
+          <OutteamInfoBlockNone>
+            Grek<br></br>Tailor
+          </OutteamInfoBlockNone>
+          <PhotoDiv>
+            <Photo src={grek} width={380} height={400} alt="Grek tailor" />
+          </PhotoDiv>
         </ImgAboutWraper>
       </RowWrapperTwo>
 
       <RowWrapper>
         <ImgAboutWraper>
-          <OutteamInfoBlockNone>Lea<br></br>Tailor</OutteamInfoBlockNone>
-            <Photo src={lea}
-              width={380}
-              height={400} 
-              alt="Lea tailor" />
+          <OutteamInfoBlockNone>
+            Lea<br></br>Tailor
+          </OutteamInfoBlockNone>
+          <PhotoDiv>
+            <Photo src={lea} width={380} height={400} alt="Lea tailor" />
+          </PhotoDiv>
         </ImgAboutWraper>
         <ImgAboutWraper>
-            <OutteamInfoBlockNone>Iren<br></br>Cleaner</OutteamInfoBlockNone>
-            <Photo src={iren}
-              width={380}
-              height={400} 
-              alt="Iren cleaner" />
+          <OutteamInfoBlockNone>
+            Iren<br></br>Cleaner
+          </OutteamInfoBlockNone>
+          <PhotoDiv>
+            <Photo src={iren} width={380} height={400} alt="Iren cleaner" />
+          </PhotoDiv>
         </ImgAboutWraper>
       </RowWrapper>
-
     </OurTeamContainer>
   );
 }
