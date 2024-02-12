@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '../public/fonts/'
+import './public/fonts/Jost-SemiBold.ttf'
+import './public/fonts/Jost.ttf'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
