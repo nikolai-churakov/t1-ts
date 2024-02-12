@@ -57,9 +57,9 @@ const OutteamInfoBlockNone = styled.div`
   align-items: center;
   text-align: center;
   color: white;
-  font-family: 'JostSemiBold';
+  font-family: "JostSemiBold";
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
 `;
 
 const PhotoDiv = styled.div``;
@@ -71,7 +71,7 @@ const ImgAboutWraper = styled.div`
   align-items: center;
   color: #ffff;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   &:hover ${OutteamInfoBlockNone} {
     display: flex;
   }

@@ -7,7 +7,7 @@ import About from "../components/About/About";
 import Corousel from "../components/Corousel/Corousel";
 import OurTeam from "../components/OurTeam/Ourteam";
 import FAQ from "../components/FAQ/FAQ";
-import Footer from "../components/Footer/Footer"
+import Footer from "../components/Footer/Footer";
 
 const BodyContainet = styled.div`
   display: flex;
@@ -41,19 +41,19 @@ const CatalogeSelectionByParamContainet = styled.div`
   display: flex;
   justify-content: left;
   flex-direction: column;
-  background-color: #FFF4EE;
+  background-color: #fff4ee;
   height: 535px;
-  color: #444B58;
+  color: #444b58;
   font-weight: 600;
   font-size: 24px;
   letter-spacing: 1px;
   position: relative;
-    top: -312px;
-    left: 0px;
+  top: -312px;
+  left: 0px;
   margin: 0px;
 `;
 const CategorySpan = styled.span`
-  color: #444B58;
+  color: #444b58;
   font-weight: 600;
   font-size: 16px;
   margin-left: 20px;
@@ -93,9 +93,12 @@ const CatalogeContainetButtonApply = styled.div`
   position: absolute;
   left: 22px;
   top: 391px;
-  background-color: #444B58;
+  background-color: #444b58;
   border-radius: 4px;
-  color: #ffffff; &:hover { color: #f14f4f; }
+  color: #ffffff;
+  &:hover {
+    color: #f14f4f;
+  }
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
@@ -115,7 +118,10 @@ const CatalogeContainetButtonReset = styled.div`
   border-radius: 4px;
   left: 23px;
   top: 470px;
-  color: #444B58; &:hover { color: #000000; }
+  color: #444b58;
+  &:hover {
+    color: #000000;
+  }
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
@@ -155,49 +161,51 @@ function HomePage() {
       <Header />
       <BodyContainet>
         <CatalogeContainet>
-           <CatalogeCataloge>Catalog</CatalogeCataloge>
-           <CatalogeSelectionByParamContainet>
-              <p>Selection <br></br> by parameters</p>
-              <CategorySpan>Category</CategorySpan>
-              <CatalogeCategoryButtonContainer>
-                <CatalogeCategoryButtonItem>smartphones</CatalogeCategoryButtonItem>
-                <CatalogeCategoryButtonItem>laptops</CatalogeCategoryButtonItem>
-                <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
-                <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
-                <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
-                <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
-                <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
-                <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
-              </CatalogeCategoryButtonContainer>
+          <CatalogeCataloge>Catalog</CatalogeCataloge>
+          <CatalogeSelectionByParamContainet>
+            <p>
+              Selection <br></br> by parameters
+            </p>
+            <CategorySpan>Category</CategorySpan>
+            <CatalogeCategoryButtonContainer>
+              <CatalogeCategoryButtonItem>
+                smartphones
+              </CatalogeCategoryButtonItem>
+              <CatalogeCategoryButtonItem>laptops</CatalogeCategoryButtonItem>
+              <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
+              <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
+              <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
+              <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
+              <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
+              <CatalogeCategoryButtonItem>sneakers</CatalogeCategoryButtonItem>
+            </CatalogeCategoryButtonContainer>
 
-              <CatalogeContainetButtonApply>Apply</CatalogeContainetButtonApply>
+            <CatalogeContainetButtonApply>Apply</CatalogeContainetButtonApply>
 
-              <CatalogeContainetButtonReset>Reset</CatalogeContainetButtonReset>
-              
-
-           </CatalogeSelectionByParamContainet>
+            <CatalogeContainetButtonReset>Reset</CatalogeContainetButtonReset>
+          </CatalogeSelectionByParamContainet>
         </CatalogeContainet>
-        
+
         <ProductContainet>
           {/* Сюда будут мапаться карточки с бека */}
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
           <ButtonShowMore>Show more</ButtonShowMore>
-          </ProductContainet>
+        </ProductContainet>
       </BodyContainet>
 
       <About />
-      <Corousel/>
-      <OurTeam/>
+      <Corousel />
+      <OurTeam />
       <FAQ />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
