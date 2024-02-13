@@ -107,10 +107,9 @@ export const ResetButton = styled.div`
   position: absolute;
   width: 237px;
   height: 65px;
-  background-color: #ffffff;
   border-radius: 4px;
   left: 23px;
-  top: 470px;
+  top: 468px;
   color: #444b58;
   cursor: pointer;
   font-size: 16px;

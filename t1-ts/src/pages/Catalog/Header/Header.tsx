@@ -11,6 +11,7 @@ import {
     Button,
     MenuBasket,
     HorizontalLine,
+    BaskerImagesWrapper,
     BigSiteLogoText,
     Title,
     Description
@@ -39,9 +40,9 @@ export const Header = () => {
                 <MenuBasket>
                     <span>{locale.header.menu.card}</span>
 
-                    <div>
+                    <BaskerImagesWrapper>
                         <img src={icon} alt="basket"/>
-                    </div>
+                    </BaskerImagesWrapper>
                 </MenuBasket>
 
                 <HorizontalLine/>

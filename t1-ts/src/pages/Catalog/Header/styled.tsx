@@ -52,9 +52,13 @@ export const Button = styled.div`
 export const MenuBasket = styled.div`
   display: flex;
   position: relative;
-  top: 11px;
-  left: -8px;
+  top: 15px;
+  left: -70px;
   color: #ffffff;
+`;
+ 
+export const BaskerImagesWrapper = styled.div`
+  margin-left: 20px;
 `;
 
 export const HorizontalLine = styled.div`

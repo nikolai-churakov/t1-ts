@@ -2,7 +2,7 @@ import React from "react";
 
 import {Product} from "../../../components/Product";
 import locale from '../../../locale/locale';
-import productImg from "../../../images/productImg2.jpg";
+import productImg from "../../../images/productImg.jpg";
 
 import {
     Container,
@@ -84,7 +84,7 @@ export const Body = () => {
 
                     <ApplyButton>{locale.catalog.parameters.apply}</ApplyButton>
 
-                    <ResetButton>{locale.catalog.parameters.apply}</ResetButton>
+                    <ResetButton>{locale.catalog.parameters.reset}</ResetButton>
                 </CatalogParameters>
             </Catalog>
 
