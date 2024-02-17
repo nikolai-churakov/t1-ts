@@ -1,8 +1,11 @@
 import React from "react";
-import {Catalog} from "./pages/Catalog";
+import { Pages } from "./pages/Pages";
+
 
 function App() {
-    return <Catalog/>;
+
+    return <Pages/>;
+
 }
 
 export default App;
