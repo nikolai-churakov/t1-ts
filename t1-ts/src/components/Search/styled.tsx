@@ -1,11 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SearchContainer = styled.div`
-display: flex;
-justify-content: space-between;
-height: 240px;
-width: auto;
-background-color: brown;
+  display: flex;
+  justify-content: space-between;
+  height: 240px;
+  width: auto;
+  background-color: brown;
+`;
+
+export const SearchDiv = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1 1 auto;
+  background-color: #547ca1;
 `;
 
 export const Button = styled.div`
