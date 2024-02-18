@@ -14,10 +14,12 @@ export const SmallContainer = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 280px;
-  height: 154px;
+  width: 97px;
+  height: 24px;
   border-radius: 4px;
   margin-right: 20px;
+  margin-bottom: 20px;
+  
 `;
 
 export const Text = styled.div`
