@@ -1,6 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
 import shopSlice from './shopSlice'
 
+///////////
+
+// import bookSlice from './shopSlice'
+// import {rootReducer} from "./rootReducer";
+
+// export const store = configureStore({
+//     reducer: rootReducer,
+// })
+//////////
+
 export const store = configureStore({
   reducer: {
     shop: shopSlice,
