@@ -7,7 +7,7 @@ import bookSlice from './shopSlice'
 import {rootReducer} from "./rootReducer";
 
 export const store = configureStore({
-    reducer: rootReducer,y
+    reducer: rootReducer,
 })
 
 // export const store = configureStore({
