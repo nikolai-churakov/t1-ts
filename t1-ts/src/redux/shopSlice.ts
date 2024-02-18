@@ -12,31 +12,31 @@ export interface ShopState {
 
 /////////
 /////////
-export interface BookList {
-  books: [];
-  totalBooks: number;
-}
+// export interface BookList {
+//   books: [];
+//   totalBooks: number;
+// }
 
-export interface Book {
-  volumeInfo: VolumeInfo;
-}
+// export interface Book {
+//   volumeInfo: VolumeInfo;
+// }
 
-export interface VolumeInfo {
-  title: string;
-  authors: string[];
-  categories: string[];
-  imageLinks: any;
-}
+// export interface VolumeInfo {
+//   title: string;
+//   authors: string[];
+//   categories: string[];
+//   imageLinks: any;
+// }
 
 /////////
 /////////
 
 const initialState: ShopState = {
     page: PAGES.CATALOG,
-  },
-  BookList = {
-    books: [],
-    totalBooks: 0,
+  // },
+  // BookList = {
+  //   books: [],
+  //   totalBooks: 0,
   };
 
 export const shopSlice = createSlice({

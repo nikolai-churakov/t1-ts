@@ -1,13 +1,13 @@
 import {combineReducers} from "redux";
-import {booksReducer} from "./shopSlice";
+// import {booksReducer} from "./shopSlice";
 import shopSlice from './shopSlice'
 import bookSlice from './shopSlice'
 
 
 export const rootReducer = combineReducers({
-    booksItems: booksReducer,
+    // booksItems: booksReducer,
     shop: shopSlice,
-    booksAPI: bookSlice,
+    // booksAPI: bookSlice,
 })
 
 export type RootReducer = ReturnType<typeof rootReducer>
