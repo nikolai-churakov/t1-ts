@@ -113,7 +113,7 @@ export const Carousel = () => {
 
         <NumberofPAgeNextStepWrapper>
           <H3Span>1 of 2</H3Span>
-          <NextStep>{locale.catalog.parameters.reset}</NextStep>
+          <NextStep>{locale.Carousel.NextStep}</NextStep>
         </NumberofPAgeNextStepWrapper>
       </ContainerColor>
     </Container>
