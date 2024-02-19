@@ -69,13 +69,26 @@ interface dataProps {
   email: string;
 }
 
+interface productsProps {
+  id: number;
+  total: number;
+
+  brand: string;
+  title: string;
+  price: number;
+}
+
 export const ProductsList = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      // Мой сервер с ответом
+      // .get("https://jsonplaceholder.typicode.com/users")
+
+      .get("https://dummyjson.com/products")
       .then((response) => {
         setData(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -92,11 +105,20 @@ export const ProductsList = () => {
             <Product imgSrc={imgSrc} name={name} coast={coast} />
           ))} */}
 
-          <h1>Список пользователей:</h1>
-          <ul>
+          <h1>Данные получены с сервера:</h1>
+          {/* Ответ моего сервера */}
+          {/* <ul>
             {data.map((user: dataProps) => (
               <li key={user.id}>
                 {user.name} ({user.email})
+              </li>
+            ))}
+          </ul> */}
+
+        <ul>
+            {data.map((product: productsProps) => (
+              <li key={product.id}>
+                {product.brand} ({product.title}) ({product.price})
               </li>
             ))}
           </ul>
