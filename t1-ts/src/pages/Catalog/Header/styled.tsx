@@ -110,3 +110,9 @@ export const Description = styled.div`
   letter-spacing: 0.5px;
   text-align: left;
 `;
+
+export const ButtonWrapper = styled.div`
+position: relative; 
+left: -475px;
+top: 369px;
+`;

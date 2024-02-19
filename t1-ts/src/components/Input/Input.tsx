@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import "./Input.css";
+import "./Styled";
 
 interface InputProps {
   value: string;
@@ -9,13 +9,11 @@ interface InputProps {
 
 export const Input: FC<InputProps> = ({ value, onChange }) => {
   const htmlFor = `${Math.random()}`;
-
   return (
-    <input
-      className={"InputFind"}
-      id={htmlFor}
-      value={value}
-      onChange={onChange}
+    <input 
+      id={htmlFor} 
+      value={value} 
+      onChange={onChange} 
     />
   );
 };
