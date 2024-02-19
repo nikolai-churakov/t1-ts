@@ -21,7 +21,7 @@ export const ImgAboutWrapper = styled.div`
   display: block;
   z-index: 10;
   position: relative;
-  top: -10px;
+  top: -11px;
   left: 260px;
 `;
 
