@@ -16,7 +16,8 @@ import {
     BaskerImagesWrapper,
     BigSiteLogoText,
     Title,
-    Description
+    Description,
+    ButtonWrapper,
 } from './styled';
 
 export const Header = () => {
@@ -60,8 +61,9 @@ export const Header = () => {
             <Description>{locale.header.description}</Description>
 
             <BigSiteLogoText>{locale.header.logo}</BigSiteLogoText>
-
-            <ActiveButton text={locale.header.shopping}/>
+            <ButtonWrapper>
+                <ActiveButton text={locale.header.shopping}/>
+            </ButtonWrapper>
         </Container>
     );
 }

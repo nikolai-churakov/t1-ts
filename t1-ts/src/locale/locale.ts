@@ -12,11 +12,11 @@ export default {
       outTeam: "Out team",
       FAQ: "FAQ",
       forStaff: "For Staff",
-      // Не использумые данные
+      // Не использумые данные//////////
       shipping: "Shipping and payment",
-
       contacts: "Contacts",
       card: "Card",
+      //////////////////////////////////
     },
   },
   catalog: {
@@ -36,5 +36,9 @@ export default {
   },
   Carousel: {
     NextStep: "Next step",
+  },
+
+  productList: {
+    Search: "Search",
   },
 };

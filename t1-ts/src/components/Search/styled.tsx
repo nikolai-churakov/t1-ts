@@ -2,18 +2,28 @@ import styled from "styled-components";
 
 export const SearchContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   height: 240px;
-  width: auto;
-  background-color: brown;
+  width: 1440px;
+  position: relative;
+`;
+
+export const H1div = styled.div`
+  font-size: 30px;
+  font-weight: 700;
+  color: #444b58;
+  margin-left: 10%;
 `;
 
 export const SearchDiv = styled.div`
   display: flex;
-  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   flex: 1 1 auto;
-  background-color: #547ca1;
+  padding: 60px;
+  /* background-color: #547ca1; */
 `;
 
 export const Button = styled.div`
@@ -34,4 +44,28 @@ export const Button = styled.div`
   &:hover {
     color: #000000;
   }
+`;
+
+export const ButtonWrapper = styled.div`
+  position: relative;
+`;
+
+export const InputWrapper = styled.div`
+  position: relative;
+  height: 67px;
+`;
+
+export const Input = styled.input`
+display: flex;
+box-sizing: border-box;
+  width: 1020px;
+  height: 67px;
+  border-radius: 4px;
+  border: 1px solid #46464684;
+  color: #B2B5BB;
+  font-size: 24px;
+  padding-left: 10px;
+  font-weight: 600px;
+  align-items: center;
+  justify-content: center;
 `;
