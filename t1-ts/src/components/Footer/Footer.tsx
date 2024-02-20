@@ -13,7 +13,7 @@ export const Footer = () => {
         <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>Goods4you</LogoName>
 
         <MenuButtons>
-          <Button>Catalog</Button>
+          <Button onClick={() => dispatch(changePage(PAGES.CATALOG))}>Catalog</Button>
 
           <Button>About us</Button>
 

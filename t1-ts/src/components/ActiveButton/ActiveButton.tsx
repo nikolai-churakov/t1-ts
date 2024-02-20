@@ -3,8 +3,10 @@ import { Button } from "./styled";
 
 interface ActiveButtonProps {
   text: string;
+  onClick?: () => void;
 }
 
-export const ActiveButton = ({ text }: ActiveButtonProps) => {
-  return <Button>{text}</Button>;
+export const ActiveButton = ({ text, onClick }: ActiveButtonProps) => {
+  
+  return <Button onClick={onClick}>{text}</Button>;
 };

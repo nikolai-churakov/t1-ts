@@ -2,20 +2,26 @@ import {createGlobalStyle} from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "Jost";
-    src: local("Jost"), url(./fonts/JostRegular.ttf) format(ttf);
-    font-weight: normal;
+    font-family: "JostRegular";
+    src: url(.././fonts/Jost-Regular.woff2) format('woff2'),
+         url(./fonts/JostRegular.ttf) format('TrueType');
+    font-weight: 400;
   }
 
   @font-face {
     font-family: "JostSemiBold";
-    src: local("JostSemiBold"), url(./fonts/JostSemiBold.ttf) format(ttf);
+    src: 
+     url(./fonts/Jost-SemiBold.woff2) format('woff2'),
+     url(./fonts/JostSemiBold.ttf) format('TrueType');
+    font-weight: 600;
   }
 
   @font-face {
     font-family: "JostBold";
-    src: local("JostBold"), url(./fonts/JostBold.ttf) format(ttf);
-    font-weight: bold;
+    src: 
+     url(./fonts/JostBold.ttf) format('woff2'),
+     url(./fonts/JostBold.ttf) format('TrueType');
+    font-weight: 700;
   }
 
   code {
@@ -24,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: "Jost", sans-serif;
+    font-family: "JostRegular", sans-serif;
   }
 
   .App {
