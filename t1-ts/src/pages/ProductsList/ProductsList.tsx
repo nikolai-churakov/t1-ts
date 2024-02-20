@@ -83,17 +83,15 @@ interface IProduct {
   images: string[];
 }
 
-interface IProductResponse<T> {
+interface IProductResponse {
   limit: number;
-  products: T[];
+  products: IProduct[];
   skip: number;
   total: number;
 }
 
-const isError = "json not responsed";
-
 export const ProductsList = () => {
-  const [data, setData] = useState([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
   useEffect(() => {
     axios
       // Мой сервер с ответом
@@ -101,7 +99,7 @@ export const ProductsList = () => {
 
       .get("https://dummyjson.com/products")
       .then((response) => {
-        setData(response.data);
+        setProducts((response.data as IProductResponse).products);
         console.log(response.data);
         console.log(response.data.products);
       })
@@ -121,7 +119,6 @@ export const ProductsList = () => {
           ))} */}
 
           <h1>Данные получены c сервера:</h1>
-          {isError && <div>Any whon here</div>}
           {/* Ответ моего сервера */}
           {/* <ul>
             {data.map((user: dataProps) => (
@@ -132,12 +129,11 @@ export const ProductsList = () => {
           </ul> */}
 
           <ul>
-            {/* {data.products &&
-              data.products.map((product: IProduct) => (
+            {products.length !== 0 && products.map((product: IProduct) => (
                 <li key={product.id}>
                   {product.brand} ({product.title}) ({product.price})
                 </li>
-              ))} */}
+              ))}
           </ul>
 
           <ShowMoreButton>{locale.catalog.parameters.showMore}</ShowMoreButton>
