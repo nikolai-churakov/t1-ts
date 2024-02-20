@@ -69,14 +69,28 @@ interface dataProps {
   email: string;
 }
 
-interface productsProps {
+interface IProduct {
   id: number;
-  total: number;
-
-  brand: string;
   title: string;
+  description: string;
   price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number; 
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
 }
+
+interface IProductResponse<T> {
+  limit: number;
+  products: T[];
+  skip: number;
+  total: number;
+}
+
+const isError = "json not responsed"
 
 export const ProductsList = () => {
   const [data, setData] = useState([]);
@@ -89,6 +103,8 @@ export const ProductsList = () => {
       .then((response) => {
         setData(response.data);
         console.log(response.data);
+        console.log(response.data.products);
+        // const data = response.data.products;
       })
       .catch((error) => {
         console.log(error);
@@ -105,7 +121,8 @@ export const ProductsList = () => {
             <Product imgSrc={imgSrc} name={name} coast={coast} />
           ))} */}
 
-          <h1>Данные получены с сервера:</h1>
+          <h1>Данные получены c сервера:</h1>
+          {isError && <div>Any whon here</div>}
           {/* Ответ моего сервера */}
           {/* <ul>
             {data.map((user: dataProps) => (
@@ -116,7 +133,8 @@ export const ProductsList = () => {
           </ul> */}
 
         <ul>
-            {data.map((product: productsProps) => (
+            {data.products && 
+            data.products.map((product: IProduct) => (
               <li key={product.id}>
                 {product.brand} ({product.title}) ({product.price})
               </li>
