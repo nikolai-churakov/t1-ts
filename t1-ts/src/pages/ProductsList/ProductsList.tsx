@@ -63,19 +63,47 @@ const PRODUCTS = [
   },
 ];
 
-interface dataProps {
-  id: string;
-  name: string;
-  email: string;
+// interface dataProps {
+//   id: string;
+//   name: string;
+//   email: string;
+// }
+
+interface IProduct {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
 }
+
+interface IProductResponse<T> {
+  limit: number;
+  products: T[];
+  skip: number;
+  total: number;
+}
+
+const isError = "json not responsed";
 
 export const ProductsList = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      // Мой сервер с ответом
+      // .get("https://jsonplaceholder.typicode.com/users")
+
+      .get("https://dummyjson.com/products")
       .then((response) => {
         setData(response.data);
+        console.log(response.data);
+        console.log(response.data.products);
       })
       .catch((error) => {
         console.log(error);
@@ -92,13 +120,24 @@ export const ProductsList = () => {
             <Product imgSrc={imgSrc} name={name} coast={coast} />
           ))} */}
 
-          <h1>Список пользователей:</h1>
-          <ul>
+          <h1>Данные получены c сервера:</h1>
+          {isError && <div>Any whon here</div>}
+          {/* Ответ моего сервера */}
+          {/* <ul>
             {data.map((user: dataProps) => (
               <li key={user.id}>
                 {user.name} ({user.email})
               </li>
             ))}
+          </ul> */}
+
+          <ul>
+            {/* {data.products &&
+              data.products.map((product: IProduct) => (
+                <li key={product.id}>
+                  {product.brand} ({product.title}) ({product.price})
+                </li>
+              ))} */}
           </ul>
 
           <ShowMoreButton>{locale.catalog.parameters.showMore}</ShowMoreButton>

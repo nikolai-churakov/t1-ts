@@ -91,8 +91,8 @@ export const Body = () => {
           <CategoryText>{locale.catalog.parameters.category}</CategoryText>
 
           <CategoryItems>
-            {ITEMS.map((name) => (
-              <Item>{name}</Item>
+            {ITEMS.map((name, id) => (
+              <Item key={id}>{name}</Item>
             ))}
           </CategoryItems>
 
@@ -103,8 +103,8 @@ export const Body = () => {
       </Catalog>
 
       <ProductContainer>
-        {PRODUCTS.map(({ imgSrc, name, coast }) => (
-          <Product imgSrc={imgSrc} name={name} coast={coast} />
+        {PRODUCTS.map(({ imgSrc, name, coast }, id) => (
+          <Product key={id} imgSrc={imgSrc} name={name} coast={coast} />
         ))}
 
         <ShowMoreButton>{locale.catalog.parameters.showMore}</ShowMoreButton>

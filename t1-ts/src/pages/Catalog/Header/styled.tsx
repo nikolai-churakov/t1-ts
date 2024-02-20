@@ -18,12 +18,18 @@ export const Menu = styled.div`
   position: absolute;
 `;
 
-export const LogoName = styled.span`
+export const LogoName = styled.div`
   color: #ffffff;
   font-size: 30px;
   font-weight: 700;
   line-height: 43px;
   margin-left: 26px;
+  cursor: pointer;
+  
+  &:hover {
+    color: #e68888;
+  }
+
 `;
 
 export const MenuButtons = styled.div`
@@ -45,7 +51,7 @@ export const Button = styled.div`
   margin-right: 16px;
 
   &:hover {
-    color: #000000;
+    color: #e68888;
   }
 `;
 

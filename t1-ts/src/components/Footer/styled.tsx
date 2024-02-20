@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #444B58;
+  background-color: #444b58;
   width: 1440px;
   height: 80px;
   position: relative;
@@ -23,6 +23,11 @@ export const LogoName = styled.span`
   font-size: 30px;
   font-weight: 700;
   margin-left: -30px;
+  cursor: pointer;
+  
+  &:hover {
+    color: #e68888;
+  }
 `;
 
 export const MenuButtons = styled.div`

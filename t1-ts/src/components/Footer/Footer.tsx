@@ -1,11 +1,16 @@
 import React from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { changePage, PAGES } from '../../redux/shopSlice'
 import {Container, MenuContainer, LogoName, MenuButtons, Button} from "./styled";
 
 export const Footer = () => {
+
+  const dispatch = useDispatch()
+
   return (
     <Container>
       <MenuContainer>
-        <LogoName>Goods4you</LogoName>
+        <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>Goods4you</LogoName>
 
         <MenuButtons>
           <Button>Catalog</Button>
@@ -16,9 +21,7 @@ export const Footer = () => {
 
           <Button>Out team</Button>
 
-          <Button>Shipping and payment</Button>
-
-          <Button>Contacts</Button>
+          <Button>FAQ</Button>
         </MenuButtons>
       </MenuContainer>
     </Container>

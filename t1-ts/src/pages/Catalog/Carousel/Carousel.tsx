@@ -104,8 +104,8 @@ export const Carousel = () => {
         <H2Span>What type of product are you considering?</H2Span>
 
         <ProductContainer>
-          {PRODUCTS.map(({ text }) => (
-            <SmallProduct text={text} />
+          {PRODUCTS.map(({ text }, id) => (
+            <SmallProduct key={id} text={text} />
           ))}
         </ProductContainer>
 
