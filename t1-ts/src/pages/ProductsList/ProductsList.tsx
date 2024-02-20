@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { Header } from "../Catalog/Header";
 import { Search } from "../../components/Search/";
 import locale from "../../locale/locale";
 import productImg from "../../images/productImg.jpg";
@@ -14,6 +13,7 @@ import {
   ShowMoreButton,
   // SelectionText,
 } from "./styled";
+import { HeaderSecondary } from "../../components/HeaderSecondary";
 
 const PRODUCTS = [
   {
@@ -112,7 +112,7 @@ export const ProductsList = () => {
 
   return (
     <Container>
-      <Header />
+      <HeaderSecondary />
       <Search />
       <ContainerBody>
         <ProductContainer>

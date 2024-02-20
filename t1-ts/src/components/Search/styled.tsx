@@ -11,9 +11,9 @@ export const SearchContainer = styled.div`
 
 export const H1div = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   position: relative;
-  height: 100px;
+  height: 80px;
   font-size: 30px;
   font-weight: 700;
   color: #444b58;

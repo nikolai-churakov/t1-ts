@@ -14,9 +14,9 @@ export default {
       forStaff: "For Staff",
       BackToSite: "Back to site"
       // Не использумые данные//////////
-      shipping: "Shipping and payment",
-      contacts: "Contacts",
-      card: "Card",
+      // shipping: "Shipping and payment",
+      // contacts: "Contacts",
+      // card: "Card",
       //////////////////////////////////
     },
   },
