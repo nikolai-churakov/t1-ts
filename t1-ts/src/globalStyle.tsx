@@ -3,19 +3,20 @@ import {createGlobalStyle} from "styled-components";
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Jost";
-    src: local("Jost"), url(./fonts/JostRegular.ttf) format(ttf);
-    font-weight: normal;
+    src: local("JostRegular"), url(./fonts/JostRegular.ttf) format(ttf);
+    font-weight: 400;
   }
 
   @font-face {
     font-family: "JostSemiBold";
     src: local("JostSemiBold"), url(./fonts/JostSemiBold.ttf) format(ttf);
+    font-weight: 600;
   }
 
   @font-face {
     font-family: "JostBold";
     src: local("JostBold"), url(./fonts/JostBold.ttf) format(ttf);
-    font-weight: bold;
+    font-weight: 700;
   }
 
   code {

@@ -12,6 +12,7 @@ export default {
       outTeam: "Out team",
       FAQ: "FAQ",
       forStaff: "For Staff",
+      BackToSite: "Back to site"
       // Не использумые данные//////////
       shipping: "Shipping and payment",
       contacts: "Contacts",
