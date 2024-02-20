@@ -4,57 +4,11 @@ import locale from "../../locale/locale";
 import productImg from "../../images/productImg.jpg";
 import axios from "axios";
 import { Container } from "../Catalog/styled";
-
+import { useSelector, useDispatch } from "react-redux";
+import { setProducts } from "../../redux/shopSlice";
+import type { RootState } from "../../redux/store";
 import { ContainerBody, ProductContainer, ShowMoreButton } from "./styled";
 import { HeaderSecondary } from "../../components/HeaderSecondary";
-
-const PRODUCTS = [
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-  {
-    imgSrc: productImg,
-    name: "Nike Air Force 1 '07 QS",
-    coast: "110 $",
-  },
-];
 
 interface IProduct {
   id: number;
@@ -78,19 +32,7 @@ interface IProductResponse {
 }
 
 export const ProductsList = () => {
-  const [products, setProducts] = useState<IProduct[]>([]);
-  useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products")
-      .then((response) => {
-        setProducts((response.data as IProductResponse).products);
-        console.log(response.data);
-        console.log(response.data.products);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  const products = useSelector((state: RootState) => state.shop.products);
 
   return (
     <Container>

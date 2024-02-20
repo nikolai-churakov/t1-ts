@@ -8,36 +8,27 @@ export enum PAGES {
 
 export interface ShopState {
   page: PAGES;
+  products: IProduct[];
 }
 
-/////////
-/////////
-// export interface BookList {
-//   books: [];
-//   totalBooks: number;
-// }
-
-// export interface Book {
-//   volumeInfo: VolumeInfo;
-// }
-
-// export interface VolumeInfo {
-//   title: string;
-//   authors: string[];
-//   categories: string[];
-//   imageLinks: any;
-// }
-
-/////////
-/////////
+interface IProduct {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
+}
 
 const initialState: ShopState = {
-    page: PAGES.CATALOG,
-  // },
-  // BookList = {
-  //   books: [],
-  //   totalBooks: 0,
-  };
+  page: PAGES.CATALOG,
+  products: [],
+};
 
 export const shopSlice = createSlice({
   name: "shop",
@@ -46,24 +37,11 @@ export const shopSlice = createSlice({
     changePage: (state, action: PayloadAction<PAGES>) => {
       state.page = action.payload;
     },
+    setProducts: (state, action: PayloadAction<IProduct[]>) => {
+      state.products = action.payload;
+    },
   },
 });
 
-// export const bookSlice = createSlice({
-//   name: "booksAPI",
-//   initialState,
-//   reducers: {
-//     addBooksToState: (state, action: PayloadAction<BookList>) => {
-//       state.page = [...action.payload.books];
-//       state.totalBooks = action.payload.totalBooks;
-//     },
-//   },
-// });
-
-// Action creators are generated for each case reducer function
-export const { changePage } = shopSlice.actions;
+export const { changePage, setProducts } = shopSlice.actions;
 export default shopSlice.reducer;
-
-// Приехало из книжного магазина
-// export const { addBooksToState } = bookSlice.actions;
-// export const booksReducer = bookSlice.reducer;
