@@ -29,7 +29,7 @@ export const Header = () => {
     return (
         <Container>
             <Menu>
-                <LogoName>{locale.header.logo}</LogoName>
+                <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>{locale.header.logo}</LogoName>
 
                 <MenuButtons>
                     <Button onClick={() => dispatch(changePage(PAGES.CATALOG))}>{locale.header.menu.catalog}</Button>

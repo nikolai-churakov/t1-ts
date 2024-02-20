@@ -10,20 +10,22 @@ export const SearchContainer = styled.div`
 `;
 
 export const H1div = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100px;
   font-size: 30px;
   font-weight: 700;
   color: #444b58;
-  margin-left: 10%;
+  margin-left: 60px;
 `;
 
 export const SearchDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   flex: 1 1 auto;
-  padding: 60px;
-  /* background-color: #547ca1; */
 `;
 
 export const Button = styled.div`
@@ -56,13 +58,14 @@ export const InputWrapper = styled.div`
 `;
 
 export const Input = styled.input`
-display: flex;
-box-sizing: border-box;
+  display: flex;
+  box-sizing: border-box;
   width: 1020px;
   height: 67px;
   border-radius: 4px;
   border: 1px solid #46464684;
-  color: #B2B5BB;
+  color: #b2b5bb;
+  background-color: #F6F6F6;
   font-size: 24px;
   padding-left: 10px;
   font-weight: 600px;

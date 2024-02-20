@@ -63,11 +63,11 @@ const PRODUCTS = [
   },
 ];
 
-interface dataProps {
-  id: string;
-  name: string;
-  email: string;
-}
+// interface dataProps {
+//   id: string;
+//   name: string;
+//   email: string;
+// }
 
 interface IProduct {
   id: number;
@@ -76,7 +76,7 @@ interface IProduct {
   price: number;
   discountPercentage: number;
   rating: number;
-  stock: number; 
+  stock: number;
   brand: string;
   category: string;
   thumbnail: string;
@@ -90,7 +90,7 @@ interface IProductResponse<T> {
   total: number;
 }
 
-const isError = "json not responsed"
+const isError = "json not responsed";
 
 export const ProductsList = () => {
   const [data, setData] = useState([]);
@@ -104,7 +104,6 @@ export const ProductsList = () => {
         setData(response.data);
         console.log(response.data);
         console.log(response.data.products);
-        // const data = response.data.products;
       })
       .catch((error) => {
         console.log(error);
@@ -132,13 +131,13 @@ export const ProductsList = () => {
             ))}
           </ul> */}
 
-        <ul>
-            {data.products && 
-            data.products.map((product: IProduct) => (
-              <li key={product.id}>
-                {product.brand} ({product.title}) ({product.price})
-              </li>
-            ))}
+          <ul>
+            {/* {data.products &&
+              data.products.map((product: IProduct) => (
+                <li key={product.id}>
+                  {product.brand} ({product.title}) ({product.price})
+                </li>
+              ))} */}
           </ul>
 
           <ShowMoreButton>{locale.catalog.parameters.showMore}</ShowMoreButton>
