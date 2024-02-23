@@ -15,13 +15,33 @@ export const Footer = () => {
         <MenuButtons>
           <Button onClick={() => dispatch(changePage(PAGES.CATALOG))}>Catalog</Button>
 
-          <Button>About us</Button>
+          <Button
+          onClick={() =>
+            document
+              .getElementById("aboutUs")
+              ?.scrollIntoView({ behavior: "smooth" })}
+          >About us</Button>
 
-          <Button>Product selection</Button>
+          <Button
+            onClick={() =>
+              document
+                .getElementById("Carousel")
+                ?.scrollIntoView({ behavior: "smooth" })}
+          >Product selection</Button>
 
-          <Button>Out team</Button>
+          <Button
+           onClick={() =>
+            document
+              .getElementById("outTeam")
+              ?.scrollIntoView({ behavior: "smooth" })}
+          >Out team</Button>
 
-          <Button>FAQ</Button>
+          <Button
+          onClick={() =>
+            document
+              .getElementById("faq")
+              ?.scrollIntoView({ behavior: "smooth" })}
+          >FAQ</Button>
         </MenuButtons>
       </MenuContainer>
     </Container>
