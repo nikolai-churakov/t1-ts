@@ -10,7 +10,7 @@ import {Container, Title, RowWrapper, RowWrapperTwo, ImgAboutWraper, OutteamInfo
 
 export const OurTeam = () => {
     return (
-        <Container>
+        <Container id='outTeam'>
             <Title>Our team</Title>
 
             <RowWrapper>

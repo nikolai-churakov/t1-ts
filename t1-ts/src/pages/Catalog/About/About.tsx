@@ -15,7 +15,7 @@ import locale from "../../../locale/locale";
 
 export const About = () => {
   return (
-    <Container>
+    <Container id="aboutUs">
       <MenuBasket>
         <ImgAboutWrapper>
           <TriangleOne />
