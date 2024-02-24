@@ -79,7 +79,7 @@ const PRODUCTS = [
 
 export const Body = () => {
   return (
-    <Container>
+    <Container id='cataloge'>
       <Catalog>
         <Title>{locale.catalog.title}</Title>
 

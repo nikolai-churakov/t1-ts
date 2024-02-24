@@ -10,10 +10,17 @@ export const Footer = () => {
   return (
     <Container>
       <MenuContainer>
-        <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>Goods4you</LogoName>
+        <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>
+          Goods4you
+          </LogoName>
 
         <MenuButtons>
-          <Button onClick={() => dispatch(changePage(PAGES.CATALOG))}>Catalog</Button>
+          <Button 
+          onClick={() =>
+            document
+              .getElementById("cataloge")
+              ?.scrollIntoView({ behavior: "smooth" })}
+          >Catalog</Button>
 
           <Button
           onClick={() =>
