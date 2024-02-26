@@ -19,12 +19,12 @@ export const Catalog = styled.div`
 `;
 
 export const Title = styled.div`
-  font-weight: 700;
+  font-family: "JostBold";
   font-size: 30px;
   letter-spacing: 1px;
   position: relative;
-  left: -2px;
-  top: -344px;
+  left: 20px;
+  top: -600px;
 `;
 
 export const CatalogParameters = styled.div`
@@ -56,6 +56,7 @@ export const CategoryItems = styled.div`
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  font-family: "JostSemiBold";
   flex-wrap: wrap;
   margin-left: 20px;
   width: 240px;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -76,18 +76,18 @@ export const QuestWrapper = styled.div`
   justify-content: space-between;
   top: 40px;
   cursor: pointer;
-  
+
   &:hover ${Answer} {
     visibility: visible;
     opacity: 1;
   }
-  
+
   &:hover ${XWrapper} {
     transform: rotate(0deg);
     transition-duration: 0.2s;
     transition-delay: 0.15s;
   }
-  
+
   &:active ${Answer} {
     visibility: visible;
     opacity: 1;
@@ -100,18 +100,18 @@ export const QuestWrapper2 = styled.div`
   justify-content: space-between;
   top: 85px;
   cursor: pointer;
-  
+
   &:hover ${Answer} {
     visibility: visible;
     opacity: 1;
   }
-  
+
   &:hover ${XWrapper} {
     transform: rotate(0deg);
     transition-duration: 0.2s;
     transition-delay: 0.15s;
   }
-  
+
   &:active ${Answer} {
     visibility: visible;
     opacity: 1;
@@ -119,6 +119,7 @@ export const QuestWrapper2 = styled.div`
 `;
 
 export const Question = styled.div`
+  font-family: "JostRegular";
   position: relative;
   top: 1px;
   left: 0;
