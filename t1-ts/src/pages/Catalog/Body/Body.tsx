@@ -193,16 +193,11 @@ export const Body = () => {
         </CatalogParameters>
       </Catalog>
 
-      {/* const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.currentTarget.value);
-   }; */}
-
       <ProductContainer>
-      allProducts
         {PRODUCTS.map(({ imgSrc, name, coast }, id) => (
           <Product key={id} imgSrc={imgSrc} name={name} coast={coast} />
         ))}
-         {/* {allProducts.map((product, id : IProduct) => (
+        {/* {allProducts.map((product, id : IProduct) => (
           <Product key={id}>{product.brand} {product.title} {product.price}</Product>
         ))} */}
 
