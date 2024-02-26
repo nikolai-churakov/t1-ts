@@ -4,7 +4,7 @@ import x from "../../../images/x.svg";
 
 export const FAQ = () => {
   return (
-    <Container>
+    <Container id="faq">
       <Questions>
         <H2Span>FAQ</H2Span>
 

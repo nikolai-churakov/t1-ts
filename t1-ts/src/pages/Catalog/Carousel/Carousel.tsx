@@ -90,7 +90,7 @@ const PRODUCTS = [
 
 export const Carousel = () => {
   return (
-    <Container>
+    <Container id='Carousel'>
       <ContainerColor>
         <HSpan>We will select the perfect product for you</HSpan>
 

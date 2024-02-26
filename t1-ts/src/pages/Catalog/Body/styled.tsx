@@ -32,14 +32,13 @@ export const CatalogParameters = styled.div`
   justify-content: left;
   flex-direction: column;
   background-color: #fff4ee;
-  height: 535px;
   color: #444b58;
   font-weight: 600;
   font-size: 24px;
   letter-spacing: 1px;
-  position: relative;
-  top: -312px;
-  left: 0;
+  position: absolute;
+  top: 130px;
+  left: 110;
 `;
 
 export const SelectionText = styled.p`
@@ -61,12 +60,14 @@ export const CategoryItems = styled.div`
   margin-left: 20px;
   width: 240px;
   padding: 0;
+  cursor: pointer;
 `;
 
 export const Item = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 120px;
   height: 57px;
   margin: 0;
@@ -75,6 +76,12 @@ export const Item = styled.div`
   border: solid #c27850 1px;
   font-size: 16px;
   font-weight: 600;
+
+  &:hover {
+    background-color: #f14f4f;
+    color:  #ffffff;
+    
+  }
 `;
 
 export const ApplyButton = styled.div`
@@ -83,9 +90,7 @@ export const ApplyButton = styled.div`
   align-items: center;
   width: 237px;
   height: 65px;
-  position: absolute;
-  left: 22px;
-  top: 391px;
+  margin: 10px 0px 10px 20px;
   background-color: #444b58;
   border-radius: 4px;
   color: #ffffff;
@@ -104,9 +109,9 @@ export const ResetButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 237px;
   height: 65px;
+  margin: 10px 0px 10px 20px;
   border-radius: 4px;
   left: 23px;
   top: 468px;
