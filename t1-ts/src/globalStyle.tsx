@@ -1,26 +1,32 @@
 import {createGlobalStyle} from "styled-components";
+import JostBold from "./fonts/JostBold.ttf"
+import JostBoldW from "./fonts/JostBoldW.woff2"
+import JostSemiBold from "./fonts/JostSemiBold.ttf"
+import JostSemiBoldW from "./fonts/JostSemiBoldW.woff2"
+import JostRegular from "./fonts/JostRegular.ttf"
+import JostRegularW from "./fonts/JostRegularW.woff2"
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "JostRegular";
-    src: url(.././fonts/Jost-Regular.woff2) format('woff2'),
-         url(./fonts/JostRegular.ttf) format('TrueType');
+    src: url(${JostRegularW}) format('woff2'),
+         url(${JostRegular}) format('TrueType');
     font-weight: 400;
   }
 
   @font-face {
     font-family: "JostSemiBold";
     src: 
-     url(./fonts/Jost-SemiBold.woff2) format('woff2'),
-     url(./fonts/JostSemiBold.ttf) format('TrueType');
+     url(${JostSemiBoldW}) format('woff2'),
+     url(${JostSemiBold}) format('TrueType');
     font-weight: 600;
   }
 
   @font-face {
     font-family: "JostBold";
     src: 
-     url(./fonts/JostBold.ttf) format('woff2'),
-     url(./fonts/JostBold.ttf) format('TrueType');
+     url(${JostBoldW}) format('woff2'),
+     url(${JostBold}) format('TrueType');
     font-weight: 700;
   }
 
