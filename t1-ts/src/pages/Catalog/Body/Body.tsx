@@ -146,9 +146,7 @@ console.log(category);
           
           >{locale.catalog.parameters.apply}</ApplyButton>
 
-          <ResetButton
-          // onClick={handleResetButtonClick}
-          >
+          <ResetButton>
             {locale.catalog.parameters.reset}
           </ResetButton>
         </CatalogParameters>
