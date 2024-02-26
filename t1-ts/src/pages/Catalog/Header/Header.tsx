@@ -31,9 +31,13 @@ export const Header = () => {
         </LogoName>
 
         <MenuButtons>
-          <Button onClick={() =>  document
+          <Button
+            onClick={() =>
+              document
                 .getElementById("catalog")
-                ?.scrollIntoView({ behavior: "smooth" })}>
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             {locale.header.menu.catalog}
           </Button>
 

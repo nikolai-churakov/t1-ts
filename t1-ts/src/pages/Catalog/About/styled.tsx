@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -26,6 +26,7 @@ export const ImgAboutWrapper = styled.div`
 `;
 
 export const Title = styled.div`
+  font-family: "JostBold";
   position: absolute;
   left: 137px;
   top: 223px;
@@ -38,6 +39,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
+  font-family: "JostSemiBold";
   position: absolute;
   left: 130px;
   top: 285px;
@@ -52,6 +54,7 @@ export const Description = styled.div`
 `;
 
 export const Brand = styled.div`
+  font-family: "JostBold";
   position: absolute;
   left: 483px;
   top: 402px;

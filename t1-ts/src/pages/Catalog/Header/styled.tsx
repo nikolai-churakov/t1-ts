@@ -43,7 +43,7 @@ export const MenuButtons = styled.div`
 
 export const Button = styled.div`
   font-size: 14px;
-  font-weight: 400;
+  font-family: "JostSemiBold";
   letter-spacing: 0.35px;
   cursor: pointer;
   color: #ffffff;
@@ -86,12 +86,14 @@ export const BigSiteLogoText = styled.div`
   letter-spacing: 13px;
   opacity: 0.12;
   color: #ffffff;
+  font-family: "JostBold";
   font-weight: 700;
   line-height: 294px;
   text-align: center;
 `;
 
 export const Title = styled.div`
+  font-family: "JostRegular";
   position: absolute;
   left: 130px;
   top: 170px;
@@ -111,7 +113,7 @@ export const Description = styled.div`
   width: 340px;
   font-size: 16px;
   color: #ffffff;
-  font-weight: 600;
+  font-family: "JostSemiBold";
   line-height: 22px;
   letter-spacing: 0.5px;
   text-align: left;

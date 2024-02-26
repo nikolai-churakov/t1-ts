@@ -1,10 +1,13 @@
-import {createGlobalStyle} from "styled-components";
-import JostBold from "./fonts/JostBold.ttf"
-import JostBoldW from "./fonts/JostBoldW.woff2"
-import JostSemiBold from "./fonts/JostSemiBold.ttf"
-import JostSemiBoldW from "./fonts/JostSemiBoldW.woff2"
-import JostRegular from "./fonts/JostRegular.ttf"
-import JostRegularW from "./fonts/JostRegularW.woff2"
+import { createGlobalStyle } from "styled-components";
+
+import JostRegularW from "./fonts/JostRegularW.woff2";
+import JostRegular from "./fonts/JostRegular.ttf";
+
+import JostSemiBoldW from "./fonts/JostSemiBoldW.woff2";
+import JostSemiBold from "./fonts/JostSemiBold.ttf";
+
+import JostBoldW from "./fonts/JostBoldW.woff2";
+import JostBold from "./fonts/JostBold.ttf";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {

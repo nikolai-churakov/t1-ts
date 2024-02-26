@@ -1,5 +1,17 @@
 import React from "react";
-import {Container, Questions, H2Span, HrH2, QuestWrapper, Question, QuestWrapper2, HrEnd, Answer, Hr, XWrapper} from './styled';
+import {
+  Container,
+  Questions,
+  H2Span,
+  HrH2,
+  QuestWrapper,
+  Question,
+  QuestWrapper2,
+  HrEnd,
+  Answer,
+  Hr,
+  XWrapper,
+} from "./styled";
 import x from "../../../images/x.svg";
 
 export const FAQ = () => {
@@ -13,11 +25,9 @@ export const FAQ = () => {
         <QuestWrapper>
           <Question>
             Question 1<Answer>Long answer to the first question</Answer>
-
             <XWrapper>
               <img src={x} alt="x" />
             </XWrapper>
-
             <Hr />
           </Question>
         </QuestWrapper>
@@ -25,7 +35,6 @@ export const FAQ = () => {
         <QuestWrapper2>
           <Question>
             Question 2<Answer>Answer 2 2024</Answer>
-
             <XWrapper>
               <img src={x} alt="x" />
             </XWrapper>
@@ -36,4 +45,4 @@ export const FAQ = () => {
       </Questions>
     </Container>
   );
-}
+};
