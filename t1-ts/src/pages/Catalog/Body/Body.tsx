@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useCallback, memo } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Product } from "../../../components/Product";
 import locale from "../../../locale/locale";
 import productImg from "../../../images/productImg.jpg";
-import { setCategories } from "../../../redux/shopSlice";
+import { setCategories, setProducts } from "../../../redux/shopSlice";
 import { RootState } from "../../../redux/store";
 import axios from "axios";
 
@@ -29,13 +29,34 @@ interface Product {
   category: string;
 }
 
-interface ProductItemProps {
-  product: Product;
+// interface ProductItemProps {
+//   product: Product;
+//   category: string;
+// }
+
+// interface ProductCategoriesResponse {
+//   categories: [];
+// }
+
+interface IProduct {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
   category: string;
+  thumbnail: string;
+  images: string[];
 }
 
-interface ProductCategoriesResponse {
-  categories: [];
+interface IProductResponse {
+  limit: number;
+  products: IProduct[];
+  skip: number;
+  total: number;
 }
 
 const PRODUCTS = [
@@ -87,10 +108,25 @@ const PRODUCTS = [
 ];
 
 export const Body = () => {
-
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState("");
 
   const dispatch = useDispatch();
+
+  const getAllProducts = () => {
+    axios
+      .get("https://dummyjson.com/products")
+      .then((response) => {
+        dispatch(setProducts((response.data as IProductResponse).products));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const allProducts = useSelector((state: RootState) => state.shop.products);
+
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setValue(event.currentTarget.value);
+  // };
 
   const getCat = () => {
     axios
@@ -103,10 +139,8 @@ export const Body = () => {
       });
   };
 
-  const getCatCategory = () => {
-    axios
-      .get(`https://dummyjson.com/products/search?q=${category}`)
-      
+  const getSelectCategory = () => {
+    axios.get(`https://dummyjson.com/products/search?q=${category}`);
   };
 
   const categories = useSelector((state: RootState) => state.shop.categories);
@@ -117,10 +151,15 @@ export const Body = () => {
     }
   }, [categories]);
 
-  const handlerClickCat = (category: string) => {
-    setCategory(category)
+  const handlerButtonAppleClickCategories = (category: string) => {
+    setCategory(category);
   };
-console.log(category);
+  console.log(category);
+
+  const handlerButtonResetClickCategories = () => {
+    setCategory("");
+  };
+
   return (
     <Container id="cataloge">
       <Catalog>
@@ -135,27 +174,37 @@ console.log(category);
 
           <CategoryItems>
             {categories.map((category: string, id) => (
-              <Item key={id} onClick={()=>handlerClickCat(category)}>
+              <Item
+                key={id}
+                onClick={() => handlerButtonAppleClickCategories(category)}
+              >
                 {category}
               </Item>
             ))}
           </CategoryItems>
 
-          <ApplyButton onClick={getCatCategory}
-          
-          
-          >{locale.catalog.parameters.apply}</ApplyButton>
+          <ApplyButton onClick={getSelectCategory}>
+            {locale.catalog.parameters.apply}
+          </ApplyButton>
 
-          <ResetButton>
+          <ResetButton onClick={handlerButtonResetClickCategories}>
             {locale.catalog.parameters.reset}
           </ResetButton>
         </CatalogParameters>
       </Catalog>
 
+      {/* const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.currentTarget.value);
+   }; */}
+
       <ProductContainer>
+      allProducts
         {PRODUCTS.map(({ imgSrc, name, coast }, id) => (
           <Product key={id} imgSrc={imgSrc} name={name} coast={coast} />
         ))}
+         {/* {allProducts.map((product, id : IProduct) => (
+          <Product key={id}>{product.brand} {product.title} {product.price}</Product>
+        ))} */}
 
         <ShowMoreButton>{locale.catalog.parameters.showMore}</ShowMoreButton>
       </ProductContainer>
