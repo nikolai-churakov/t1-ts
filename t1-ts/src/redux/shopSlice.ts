@@ -9,6 +9,7 @@ export enum PAGES {
 export interface ShopState {
   page: PAGES;
   products: IProduct[];
+  categories: string[];
 }
 
 interface IProduct {
@@ -25,9 +26,15 @@ interface IProduct {
   images: string[];
 }
 
+interface ProductCategories {
+  id: number;
+  categories: [];
+}
+
 const initialState: ShopState = {
   page: PAGES.CATALOG,
   products: [],
+  categories: [],
 };
 
 export const shopSlice = createSlice({
@@ -40,8 +47,11 @@ export const shopSlice = createSlice({
     setProducts: (state, action: PayloadAction<IProduct[]>) => {
       state.products = action.payload;
     },
+    setCategories: (state, action: PayloadAction<string[]>) => {
+      state.categories = action.payload;
+    },
   },
 });
 
-export const { changePage, setProducts } = shopSlice.actions;
+export const { changePage, setProducts, setCategories } = shopSlice.actions;
 export default shopSlice.reducer;
