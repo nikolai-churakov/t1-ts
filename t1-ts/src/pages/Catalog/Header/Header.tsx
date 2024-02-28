@@ -4,6 +4,8 @@ import icon from "../../../images/Vector.svg";
 import { ActiveButton } from "../../../components/ActiveButton";
 import { useSelector, useDispatch } from "react-redux";
 import { changePage, PAGES } from "../../../redux/shopSlice";
+import { Link } from "react-router-dom";
+
 
 import {
   Container,
@@ -26,10 +28,9 @@ export const Header = () => {
   return (
     <Container>
       <Menu>
-        <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>
-          {locale.header.logo}
-        </LogoName>
-
+          <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>
+            {locale.header.logo}
+          </LogoName>
         <MenuButtons>
           <Button
             onClick={() =>
