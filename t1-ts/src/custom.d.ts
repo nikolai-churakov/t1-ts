@@ -27,3 +27,7 @@ declare module '*.woff2' {
   export default src;
 }
 
+declare function BrowserRouter(
+  props: BrowserRouterProps
+): React.ReactElement;
+

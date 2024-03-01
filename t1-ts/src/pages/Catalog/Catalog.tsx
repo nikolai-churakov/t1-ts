@@ -7,25 +7,27 @@ import {Carousel} from "./Carousel";
 import {OurTeam} from "./OurTeam";
 import {FAQ} from "./FAQ";
 import {Footer} from "../../components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import {Container} from './styled';
 
 export const Catalog = () => {
     return (
-        <Container>
-            <Header/>
+            <Container>
+                <Header/>
 
-            <Body/>
+                <Body/>
 
-            <About/>
+                <About/>
 
-            <Carousel/>
+                <Carousel/>
 
-            <OurTeam/>
+                <OurTeam/>
 
-            <FAQ/>
+                <FAQ/>
 
-            <Footer/>
-        </Container>
+                <Footer/>
+            </Container>
     );
 }
