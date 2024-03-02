@@ -1,13 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export enum PAGES {
-  CATALOG = "CATALOG",
-  PRODUCTS_LIST = "PRODUCTS_LIST",
-}
-
 export interface ShopState {
-  page: PAGES;
   products: IProduct[];
   categories: string[];
 }
@@ -32,7 +26,6 @@ interface ProductCategories {
 }
 
 const initialState: ShopState = {
-  page: PAGES.CATALOG,
   products: [],
   categories: [],
 };
@@ -41,9 +34,6 @@ export const shopSlice = createSlice({
   name: "shop",
   initialState,
   reducers: {
-    changePage: (state, action: PayloadAction<PAGES>) => {
-      state.page = action.payload;
-    },
     setProducts: (state, action: PayloadAction<IProduct[]>) => {
       state.products = action.payload;
     },
@@ -53,5 +43,5 @@ export const shopSlice = createSlice({
   },
 });
 
-export const { changePage, setProducts, setCategories } = shopSlice.actions;
+export const { setProducts, setCategories } = shopSlice.actions;
 export default shopSlice.reducer;

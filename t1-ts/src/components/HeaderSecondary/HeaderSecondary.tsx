@@ -1,7 +1,7 @@
 import React from "react";
 import locale from "../../locale/locale";
 import { useSelector, useDispatch } from "react-redux";
-import { changePage, PAGES } from "../../redux/shopSlice";
+import { Link } from "react-router-dom";
 
 import {
   Container,
@@ -21,14 +21,12 @@ export const HeaderSecondary = () => {
   return (
     <Container>
       <Menu>
-        <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>
-          {locale.header.logo}
-        </LogoName>
+        <Link to="/" relative="path">
+          <LogoName>{locale.header.logo}</LogoName>
+        </Link>
 
         <MenuButtons>
-          <Button onClick={() => dispatch(changePage(PAGES.CATALOG))}>
-            {locale.header.menu.catalog}
-          </Button>
+          <Button>{locale.header.menu.catalog}</Button>
 
           <Button>{locale.header.menu.aboutUs}</Button>
 
@@ -38,9 +36,7 @@ export const HeaderSecondary = () => {
 
           <Button>{locale.header.menu.FAQ}</Button>
 
-          <Button onClick={() => dispatch(changePage(PAGES.PRODUCTS_LIST))}>
-            {locale.header.menu.BackToSite}
-          </Button>
+          <Button>{locale.header.menu.BackToSite}</Button>
         </MenuButtons>
 
         <HorizontalLine />

@@ -1,11 +1,9 @@
 import React from "react";
 import locale from "../../../locale/locale";
-import icon from "../../../images/Vector.svg";
 import { ActiveButton } from "../../../components/ActiveButton";
 import { useSelector, useDispatch } from "react-redux";
-import { changePage, PAGES } from "../../../redux/shopSlice";
 import { Link } from "react-router-dom";
-
+import styled from "styled-components";
 
 import {
   Container,
@@ -13,14 +11,22 @@ import {
   LogoName,
   MenuButtons,
   Button,
-  MenuBasket,
   HorizontalLine,
-  BaskerImagesWrapper,
   BigSiteLogoText,
   Title,
   Description,
   ButtonWrapper,
 } from "./styled";
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
+
+export default (props: any) => <StyledLink {...props} />;
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -28,9 +34,14 @@ export const Header = () => {
   return (
     <Container>
       <Menu>
-          <LogoName onClick={() => dispatch(changePage(PAGES.CATALOG))}>
-            {locale.header.logo}
-          </LogoName>
+        
+        <StyledLink to="/" relative="path" >
+        
+          <LogoName>{locale.header.logo}</LogoName>
+          
+        </StyledLink>
+        
+
         <MenuButtons>
           <Button
             onClick={() =>
@@ -82,9 +93,9 @@ export const Header = () => {
             {locale.header.menu.FAQ}
           </Button>
 
-          <Button onClick={() => dispatch(changePage(PAGES.PRODUCTS_LIST))}>
-            {locale.header.menu.forStaff}
-          </Button>
+          <Link to="/ProductsList" relative="path" style={{ textDecoration: 'none' }}>
+            <Button>{locale.header.menu.forStaff}</Button>
+          </Link>
         </MenuButtons>
         {/*  Корзина с товарами отключена */}
         {/* <MenuBasket>
