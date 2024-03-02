@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center; 
-  background-color: #444B58;
-  width: 980px;
+  justify-content: center;
+  background-color: #444b58;
+  width: 1440px;
   height: 80px;
   position: relative;
 `;
@@ -12,10 +12,10 @@ export const Container = styled.div`
 export const MenuContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 980px;
+  width: 1440px;
   height: 80px;
   margin-top: 15px;
-  position: absolute; 
+  position: absolute;
 `;
 
 export const LogoName = styled.span`
@@ -23,6 +23,11 @@ export const LogoName = styled.span`
   font-size: 30px;
   font-weight: 700;
   margin-left: -30px;
+  cursor: pointer;
+
+  &:hover {
+    color: #e68888;
+  }
 `;
 
 export const MenuButtons = styled.div`

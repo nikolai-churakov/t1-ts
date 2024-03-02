@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -25,11 +25,11 @@ export const LogoName = styled.div`
   line-height: 43px;
   margin-left: 26px;
   cursor: pointer;
-  
+  text-decoration: none;
+
   &:hover {
     color: #e68888;
   }
-
 `;
 
 export const MenuButtons = styled.div`
@@ -62,7 +62,7 @@ export const MenuBasket = styled.div`
   left: -70px;
   color: #ffffff;
 `;
- 
+
 export const BaskerImagesWrapper = styled.div`
   margin-left: 20px;
 `;
@@ -120,7 +120,7 @@ export const Description = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-position: relative; 
-left: -475px;
-top: 369px;
+  position: relative;
+  left: -475px;
+  top: 369px;
 `;
